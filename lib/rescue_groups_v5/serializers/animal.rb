@@ -1,5 +1,5 @@
 require 'json'
-require_relative '../models/fields/animal_fields'
+require_relative '../fields/animal'
 require_relative '../helpers/case_converter'
 
 module RescueGroupsV5
@@ -15,7 +15,9 @@ module RescueGroupsV5
         # TODO: depends on the format of the JSON we get from RG... might have to wait
         res = {}
         JSON.parse(@json).each do |key, value|
-          res[convert_to_snake_case(key)] = value if AnimalFields::FIELDS.include?(key)
+          if RescueGroupsV5::Fields::Animal::FIELDS.include?(key)
+            res[convert_to_snake_case(key)] = value
+          end
         end
         res
       end

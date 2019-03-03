@@ -5,8 +5,8 @@ module RescueGroupsV5
     @@configuration = {}
 
     # TODO: RDOC here
-    def self.set(atts = {})
-      @@configuration.merge!(atts)
+    def self.set(key, value)
+      @@configuration[key] = value
     end
 
     def self.read(key)
