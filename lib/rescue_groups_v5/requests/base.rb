@@ -1,6 +1,8 @@
 module RescueGroupsV5
   module Requests
     class Base
+      PUBLIC_URL = Config.read(:public_url) || 'https://api.rescuegroups.org/v5/'
+
       def get_request(path, opts = {})
         # PUBLIC_URL + path
         # TODO
@@ -15,14 +17,14 @@ module RescueGroupsV5
         @connection ||= Faraday.new
       end
 
-      private
-
-      def headers
-        {
+      def headers(opts = {})
+        connection.headers.merge({
           'Content-Type' => 'application/json',
           'Authorization' => Config.read(:api_key),
-        }.merge(connection.headers)
+        }).merge(opts)
       end
+
+      private
 
       # TODO: each one of these methods might need to consume a service
 

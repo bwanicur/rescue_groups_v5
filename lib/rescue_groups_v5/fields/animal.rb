@@ -2,67 +2,64 @@ module RescueGroupsV5
   module Fields
     module Animal
       FIELDS = %w[
-        id
         activityLevel
         adoptedDate
-        adoptionFee
-        isAdoptionPending
+        adoptionFeeString
         adultSexesOk
         ageGroup
-        age
-        isAltered
         availableDate
         birthDate
-        isBirthDateExact
-        breedId
-        breed
         breedPrimary
         breedPrimaryId
         breedSecondary
         breedSecondaryId
-        isBreedMixed
-        isCatsOk
         coatLength
-        color
-        colorId
         colorDetails
-        isCourtesyListing
-        isCurrentVaccinations
-        isDeclawed
+        createdDate
         descriptionHtml
         descriptionText
         distinguishingMarks
-        isDogsOk
         earType
         energyLevel
-        eventsAttendingCount
         exerciseNeeds
         eyeColor
         fenceNeeds
-        isNeedingFoster
-        isFound
         foundDate
         foundPostalcode
         groomingNeeds
-        priority
-        isHousetrained
         housetrainedReasonNot
+        id
         indoorOutdoor
+        isAdoptionPending
+        isAltered
+        isBirthDateExact
+        isBreedMixed
+        isCatsOk
+        isCourtesyListing
+        isCurrentVaccinations
+        isDeclawed
+        isDogsOk
+        isFarmAnimalsOk
+        isFound
+        isHousetrained
         isKidsOk
+        isMicrochipped
+        isNeedingFoster
+        isSpecialNeeds
+        isSponsorable
+        isYardRequired
         killDate
         killReason
-        isMicrochipped
         name
         newPeopleReaction
         obedienceTraining
         ownerExperience
-        pattern
-        patternId
         pictureCount
         pictureThumbnailUrl
+        priority
         qualities
         rescueId
-        search
+        searchString
         sex
         sheddingLevel
         sizeCurrent
@@ -70,23 +67,18 @@ module RescueGroupsV5
         sizePotential
         sizeUOM
         slug
-        isSpecialNeeds
         specialNeedsDetails
-        species
-        speciesId
-        isSponsorable
         sponsors
         sponsorshipDetails
         sponsorshipMinimum
         summary
         tailType
+        trackerimageUrl
+        updatedDate
         url
         videoCount
         videoUrlCount
         vocalLevel
-        isYardRequired
-        createdDate
-        updatedDate
       ]
     end
   end

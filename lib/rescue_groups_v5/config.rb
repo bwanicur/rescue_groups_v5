@@ -10,7 +10,7 @@ module RescueGroupsV5
     end
 
     def self.read(key)
-      key ? @@configuration[key] : @@configuration
+      key ? (@@configuration[key.to_s] || @configuration[key.to_sym]) : @@configuration
     end
   end
 end

@@ -3,10 +3,8 @@ require_relative './services/filter_builder'
 
 module RescueGroupsV5
   class Client
-    PUBLIC_URL = Config.read(:public_url) || 'https://api.rescuegroups.org/v5/'
-
     def initalize(atts = {})
-      api_key = atts[:api_key] || Config.read(:api_key) || Config.read('api_key')
+      api_key = atts[:api_key] || Config.read(:api_key)
       Config.set(:api_key, api_key)
     end
 

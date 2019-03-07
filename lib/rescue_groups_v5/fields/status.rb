@@ -1,9 +1,9 @@
 module RescueGroupsV5
   module StatusFields
     FIELDS = %[
+      description
       id
       name
-      description
     ]
   end
 end
