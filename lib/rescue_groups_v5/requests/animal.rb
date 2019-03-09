@@ -1,16 +1,23 @@
+require_relative '../serializers/animal_serializer'
+
 module RescueGroupsV5
   module Requests
-    class Animal < Base
+    class Animal
       PATH = '/animals'
 
       # TODO: YARD DOC HERE
+      def list(opts = {})
+        Request.new.get(PATH, opts)
+      end
+
+      # TODO: YARD DOC HERE
       def search(opts = {})
-        post_request("/#{PATH}/search", opts)
+        Request.new.post("/#{PATH}/search", opts)
       end
 
       # TODO: YARD DOC HERE
       def find(id)
-        get_request(PATH, opts)
+        Request.new.get("#{PATH}/#{id}", opts)
       end
     end
   end

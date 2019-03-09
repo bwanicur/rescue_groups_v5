@@ -2,15 +2,17 @@ module RescueGroupsV5
   class Config
     private_class_method :new
 
-    @@configuration = {}
+    @@conf = {}
+    if ENV['RESCUE_GROUPS_V5_API_KEY']
+      @@conf[:api_key] = ENV['RESCUE_GROUPS_V5_API_KEY']
+    end
 
-    # TODO: RDOC here
     def self.set(key, value)
-      @@configuration[key] = value
+      @@conf[key] = value
     end
 
     def self.read(key)
-      key ? (@@configuration[key.to_s] || @configuration[key.to_sym]) : @@configuration
+      key ? (@@conf[key.to_s] || @@conf[key.to_sym]) : @@conf
     end
   end
 end

@@ -1,19 +1,15 @@
-require 'faraday'
-require_relative './services/filter_builder'
-
 module RescueGroupsV5
   class Client
-    def initalize(atts = {})
-      api_key = atts[:api_key] || Config.read(:api_key)
-      Config.set(:api_key, api_key)
+    def list_animals(opts = {})
+      RescueGroupsV5::Requests::Animal.new.list(opts)
     end
 
     def search_animals
-      # RescueGroupsV5::Requests::Animal.search()
+      # RescueGroupsV5::Requests::Animal.new.search()
     end
 
     def get_animal
-      # RescueGroupsV5::Requests::Animal.find()
+      # RescueGroupsV5::Requests::Animal.new.find()
     end
 
     def search_organizations
