@@ -3,6 +3,7 @@ module RescueGroupsV5
     private_class_method :new
 
     @@conf = {}
+
     if ENV['RESCUE_GROUPS_V5_API_KEY']
       @@conf[:api_key] = ENV['RESCUE_GROUPS_V5_API_KEY']
     end

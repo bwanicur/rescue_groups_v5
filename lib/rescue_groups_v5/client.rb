@@ -1,21 +1,31 @@
 module RescueGroupsV5
   class Client
+    def initialize(api_key = nil)
+      @api_key = api_key || Config.read(:api_key)
+    end
+
     def list_animals(opts = {})
-      RescueGroupsV5::Requests::Animal.new.list(opts)
+      animal_request.list(opts)
     end
 
     def search_animals
-      # RescueGroupsV5::Requests::Animal.new.search()
+      animal_request.search(opts)
     end
 
     def get_animal
-      # RescueGroupsV5::Requests::Animal.new.find()
+      animal_request.find(opts)
     end
 
     def search_organizations
     end
 
     def get_organization
+    end
+    
+    private
+
+    def animal_request
+      RescueGroupsV5::Requests::Animal.new(@api_key)
     end
   end
 end

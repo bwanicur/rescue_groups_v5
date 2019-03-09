@@ -1,13 +1,15 @@
 require 'faraday'
+require 'json'
 require_relative '../services/filter_builder'
 
 module RescueGroupsV5
   module Requests
     class Request
-      def initialize(connection: nil, api_key: nil, url: nil)
-        url ||= 'https://api.rescuegroups.org/v5/public'
-        @conn = connection || Faraday.new(url: url)
-        @api_key = api_key || Config.read(:api_key)
+      URL = 'https://api.rescuegroups.org/v5/public'.freeze
+
+      def initialize(api_key, connection: nil)
+        @conn = connection || Faraday.new(url: URL)
+        @api_key = api_key
       end
 
       def get(path, opts = {})
@@ -20,14 +22,15 @@ module RescueGroupsV5
 
       private
 
-      def base_request(verb, path, opts = {})
-        @conn.send(verb, path) do |req|
+      def base_request(verb, path, opts)
+        res = @conn.send(verb, path) do |req|
           req.headers['Content-Type'] = 'application/json'
           req.headers['Authorization'] = @api_key
           req.params['fields'] = fields_str(opts[:fields]) if opts[:fields]
           req.params['includes'] = includes_str(opts[:includes]) if opts[:includes]
           req.params['sort'] = sort_str(opts[:sort]) if opts[:sort]
         end
+        JSON.parse(res)
       end
 
       # TODO: each one of these methods might need to consume a service

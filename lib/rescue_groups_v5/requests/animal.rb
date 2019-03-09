@@ -1,5 +1,3 @@
-require_relative '../serializers/animal_serializer'
-
 module RescueGroupsV5
   module Requests
     class Animal
