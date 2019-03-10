@@ -1,4 +1,5 @@
 require "bundler/setup"
+require 'byebug'
 require "rescue_groups_v5"
 
 RSpec.configure do |config|
