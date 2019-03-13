@@ -12,7 +12,6 @@ module RescueGroupsV5
         @api_key = api_key
       end
 
-      # TODO: RDOC explain options here
       def get(path, opts = {})
         base_request(:get, path, opts)
       end
@@ -44,6 +43,9 @@ module RescueGroupsV5
         includes.map(&:to_s).join(',')
       end
 
+      # TODO: replace with service
+      # => check to see if direction is :ascending or :descending
+      # => create sort string
       def sort_str(sort_data = {})
         sort_data.inject([]) do |array, hash|
           hash.each do |field_name, direction|
@@ -64,7 +66,7 @@ module RescueGroupsV5
             filters: FilterBuilder.transform_filters(opts[:filters])
           )
         end
-        if opts[:zipcode] && opts[:radius_in_miles]
+        if opts[:zipcode] && opts[:radiusInMiles]
           res.merge!(
             filterRadius: {
               zipcode: opts[:zipcode],

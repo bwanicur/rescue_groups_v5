@@ -4,15 +4,11 @@ module RescueGroupsV5
       @api_key = api_key || Config.read(:api_key)
     end
 
-    def list_animals(opts = {})
-      animal_request.list(opts)
-    end
-
     def search_animals
       animal_request.search(opts)
     end
 
-    def get_animal
+    def get_animal(opts = {})
       animal_request.find(opts)
     end
 
