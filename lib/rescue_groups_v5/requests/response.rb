@@ -10,22 +10,26 @@ module RescueGroupsV5
 
       def run
         data = JSON.parse(@json)
-        if !data['included'].empty?
+        if !data['included']&.empty?
           data['data'].each do |data_hash|
             data_hash['relationships'].each do |obj_name, rel_hash|
               rel_hash['data'].each do |rel_data_hash|
-                my_included_data = data['included'].select do |included_hash|
-                  included_hash['type'] == rel_data_hash.fetch('type') &&
-                  included_hash['id'] == rel_data_hash.fetch('id')
-                end.first
-                if my_included_data['attributes']
-                  rel_data_hash.merge!(my_included_data['attributes'])
-                end
+                rel_data_hash.merge!(get_included_data(data['included'], rel_data_hash))
               end
             end
           end
         end
         data
+      end
+
+      private
+
+      def get_included_data(included_data, my_hash)
+        my_data = included_data.select do |included_hash|
+          included_hash['type'] == my_hash.fetch('type') &&
+          included_hash['id'] == my_hash.fetch('id')
+        end.first
+        my_data ? my_data['attributes'] : {}
       end
 
     end

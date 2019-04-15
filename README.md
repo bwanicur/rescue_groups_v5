@@ -40,42 +40,49 @@ result = client.search_animals(options)
 ```
 
 ## Request Options
-### Fields:
+### Fields Option:
 A hash where each key is the name of an object and each value is an array of fields to include: `{ object: [ :collection, :of, :fields ] }`
 
-Supported Objects:
+### Supported Objects:
 - animals
 - orgs
 
-Fields:
-- [Animal](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/animal.rb)
-- [Breed](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/breed.rb)
-- [Organization](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/organzation.rb)
-- [Contact](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/contact.rb)
-- [Status](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/status.rb)
+### Available Fields:
+- [Animals](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/animal.rb)
+- [Breeds](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/breed.rb)
+- [Organizations](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/organzation.rb)
+- [Contacts](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/contact.rb)
+- [Statuses](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/status.rb)
 
 Example:
 ```ruby
 options[:fields] = {
   animals: [ :name, :ageGroup, :breedPrimary ],
-  organizations: [ :name, :city ]
+  orgs: [ :name, :city ]
 }
 ```
 
 ### Sort:
-A hash where the value is an object.  The hash will have to keys:  `sort_value` and `direction (:ascending / :descending)`:
+An array of hashes with the following keys:
+
+- object: (aniamls, organizations, events)
+- sort_value: they attribute to use for sorting
+- direction:  sort direction
+
 ```ruby
 # sort by Animal breedPrimary - ascending, then Organization name ascending
-options[:sort] = {
-  animals: {
+options[:sort] = [
+  {
+    object: :animals,
     sort_value: :breedPrimary,
     direction: :ascending
   },
-  orgs: {
+  {
+    object: :orgs,
     sort_value: :name,
     direction: :ascending
   }
-}
+]
 ```
 
 ### Start:
@@ -110,29 +117,31 @@ options[:zipcode] = '92107' # string zipcode
 options[:radius_in_miles] = 20 # integer value
 ```
 
-
 ### General Filters:
 _Only available on search requests_
 
-A Hash containing object names for the keys.  The value for each key should be metadata about the filter. The metadata data should have the following keys:
+An array of hashes containing the following keys:
 
-- operation (see list of operations [here](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/services/filter_builder.rb))
-- field name (the object's field)
+- object: animals, organizations, events
+- field_name: the object's field
+- operation: see list of operations [here](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/services/filter_builder.rb)
 - value
 
 ```ruby
-options[:filters] = {
-  animals: {
-    operation: :equals,
+options[:filters] = [
+  {
+    object: :animals,
     fieldName: :breedPrimary,
+    operation: :equals,
     value: 'Staffordshire Bull Terrier'
   },
-  animals: {
+  {
+    object: :animals,
     operation: :greater_than,
     fieldName: :birthDate,
     value: '01-01-2012'
-  }
-}
+  }  
+]
 ```
 
 ## Contributing

@@ -3,16 +3,20 @@ module RescueGroupsV5
     class Animal
       PATH = '/animals'
 
+      def initialize(api_key)
+        @api_key = api_key
+      end
+
       def list(opts = {})
-        Request.new.get(PATH, opts)
+        Request.new(@api_key).get(PATH, opts)
       end
 
       def search(opts = {})
-        Request.new.post("/#{PATH}/search", opts)
+        Request.new(@api_key).post("#{PATH}/search", opts)
       end
 
-      def find(id)
-        Request.new.get("#{PATH}/#{id}", opts)
+      def find(id, opts = {})
+        Request.new(@api_key).get("#{PATH}/#{id}", opts)
       end
     end
   end

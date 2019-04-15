@@ -14,29 +14,21 @@ module RescueGroupsV5
         not_blank:             :notblank
       }
 
-      def self.transform_filters(filters_data)
-        filters = []
-        filters_data.each do |field_name, filter_metadata|
-          if filter_metadata.is_a?(String) || filter_metadata.is_a?(Integer)
-            operation = OPERATIONS[:equals]
-            value = filter_metadata
-          else
-            operation = filter_metadata[:operation]
-            value = filter_metadata[:value]
-          end
-          filters << {
-            fieldName: field_name,
+      def self.run(filters_data)
+        filters_data.map do |hash|
+          operation = hash[:operation] || OPERATIONS[:equals]
+          {
+            fieldName: "#{hash[:object]}.#{hash[:field_name]}",
             operation: translate_operation(operation),
-            criterion: value
+            criterion: hash[:value]
           }
         end
-        filters
       end
 
       private
 
       def self.translate_operation(operation_key)
-        OPERATIONS[operation_key]
+        OPERATIONS[operation_key].to_s
       end
     end
   end
