@@ -4,13 +4,14 @@ module RescueGroupsV5
   module Requests
     class Response
 
-      def initialize(json)
+      def initialize(json, no_nest_data = false)
         @json = json
+        @no_nest_data = no_nest_data
       end
 
       def run
         data = JSON.parse(@json)
-        if !data['included']&.empty?
+        if !@no_nest_data && !data['included']&.empty?
           data['data'].each do |data_hash|
             data_hash['relationships'].each do |obj_name, rel_hash|
               rel_hash['data'].each do |rel_data_hash|

@@ -2,12 +2,11 @@ require 'spec_helper'
 require_relative '../../lib/rescue_groups_v5/requests/request'
 
 RSpec.describe RescueGroupsV5::Requests::Request do
+  # Cannot get this to work :/  Matching on exact URL
+  # let(:animals_url_regex) { /\/v5\/public\/animals.+/ }
   let(:test_get_url) do
     "/v5/public/animals?fields=fields%5Banimals%5D%3Dname%2CageGroup%2CbreedPrimary%26fields%5Borgs%5D%3Dname%2Ccity%26fields%5Bfosters%5D%3Demail&includes=animals%2Corgs%2Cfosters&limit=10&sort=animals.ageGroup-%2Corgs.name%2B&start=20"
   end
-
-  # Cannot get this to work :/  Matching on exact URL
-  # let(:animals_url_regex) { /\/v5\/public\/animals.+/ }
 
   let(:test_post_url) { "/v5/public/animals/search" }
 

@@ -1,6 +1,6 @@
 module RescueGroupsV5
   module Requests
-    class Organization
+    class Org
       
     end
   end

@@ -1,6 +1,6 @@
 module RescueGroupsV5
   module Fields
-    module Organization
+    module Org
       FIELDS = %w[
         about
         adoptionProcess

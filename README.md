@@ -1,6 +1,6 @@
 # RescueGroupsV5
 
-This is the wrapper for the new [Rescue Groups API V5](https://api.rescuegroups.org/v5/public/docs)
+This is the wrapper for the new <a target="_blank" href="https://api.rescuegroups.org/v5/public/docs">Rescue Groups API V5</a>
 
 ## Installation
 
@@ -50,7 +50,7 @@ A hash where each key is the name of an object and each value is an array of fie
 ### Available Fields:
 - [Animals](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/animal.rb)
 - [Breeds](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/breed.rb)
-- [Organizations](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/organzation.rb)
+- [Organizations](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/organization.rb)
 - [Contacts](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/contact.rb)
 - [Statuses](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/status.rb)
 

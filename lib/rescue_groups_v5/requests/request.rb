@@ -44,7 +44,7 @@ module RescueGroupsV5
             req.body = body_data.to_json
           end
         end
-        Response.new(res.body).run
+        Response.new(res.body, opts[:no_nest_data]).run
       end
 
       def includes_str(includes = [])
