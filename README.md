@@ -101,8 +101,16 @@ options[:limit] = {
 }
 ```
 
-### Options:
-_TODO_
+### Other Options:
+
+- No Nest Data:  This gem will nest included data under the parent object by default. \
+If you do not want this feature, set `no_nest_data` to true.  Included data will still \
+be under the `included` section of the response, regardless of this option.
+```ruby
+{
+  no_nest_data: true # Defaults to false
+}
+```
 
 ### Location Filtering:
 _Only available on search requests_
