@@ -103,12 +103,12 @@ options[:limit] = {
 
 ### Other Options:
 
-- No Nest Data:  This gem will nest included data under the parent object by default. \
-If you do not want this feature, set `no_nest_data` to true.  Included data will still \
+- Nest Data:  This gem can nest included data under the parent object. \
+If you want this feature, set `nest_data` to true.  Included data will still \
 be under the `included` section of the response, regardless of this option.
 ```ruby
 {
-  no_nest_data: true # Defaults to false
+  nest_data: false # Defaults to false
 }
 ```
 
@@ -140,8 +140,8 @@ options[:filters] = [
   {
     object: :animals,
     fieldName: :breedPrimary,
-    operation: :equals,
-    value: 'Staffordshire Bull Terrier'
+    operation: :contains,
+    value: 'Staffordshire'
   },
   {
     object: :animals,

@@ -16,7 +16,7 @@ RSpec.describe RescueGroupsV5::Requests::Response do
 
     context 'ONE INCLUDE' do
       it 'will parse JSON and nest any included data' do
-        res = described_class.new(parsed_response.to_json).run
+        res = described_class.new(parsed_response.to_json, true).run
         expect(res['data'].size).to eq(2)
         first = res['data'].first
         expect(first['relationships']['orgs']['data'].first['name']).to_not be_nil
