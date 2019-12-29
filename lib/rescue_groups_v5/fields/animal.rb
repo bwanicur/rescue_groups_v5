@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RescueGroupsV5
   module Fields
     module Animal
@@ -79,7 +81,7 @@ module RescueGroupsV5
         videoCount
         videoUrlCount
         vocalLevel
-      ]
+      ].freeze
     end
   end
 end

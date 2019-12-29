@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rescuegroups.org/v5/public/orgs/search?limit=5
+    body:
+      encoding: UTF-8
+      string: "{"data":{"filters":[{"fieldName":"orgs.city","operation":"equals","criteria":"Los
+        Angeles"}]}}"
+    headers:
+      User-Agent:
+      - Faraday v0.17.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - T5la0hn8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 28 Dec 2019 17:58:16 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - POST, GET, DELETE, PATCH, PUT, OPTIONS
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Content-Length:
+      - "2801"
+      Connection:
+      - close
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: "{"meta":{"count":18,"countReturned":5,"pageReturned":1,"limit":5,"pages":4,"requestTime":1577555896,"responseTime":1577555896,"responseMs":14,"transactionId":"phmjSbHRBWjV"},"data":[{"type":"orgs","id":"871","attributes":{"name":"Kitten
+        Rescue","street":"3519 Casitas Avenue","city":"Los Angeles","state":"CA","postalcode":"90039","country":"United
+        States","phone":"(818) 347-3037","email":"mail@kittenrescue.org","url":"http:\/\/www.kittenrescue.org","serveAreas":"Los
+        Angeles and surrounding areas","services":"Adoptions","meetPets":[""],"type":"Rescue","lat":34.1206,"lon":-118.255,"coordinates":"34.1206,
+        -118.255","citystate":"Los Angeles, CA"}},{"type":"orgs","id":"1175","attributes":{"name":"Stray
+        Cat Alliance","street":"PO Box 661277","city":"Los Angeles","state":"CA","postalcode":"90066","country":"United
+        States","phone":"(310) 281-6973","email":"Adoptions@StrayCatAlliance.org","url":"http:\/\/straycatalliance.org","services":"adoptions
+        of rescued cats, free s\/n clinics for feral cats","meetPets":[""],"type":"Rescue","lat":34.0001,"lon":-118.433,"coordinates":"34.0001,
+        -118.433","citystate":"Los Angeles, CA"}},{"type":"orgs","id":"2012","attributes":{"name":"West
+        Los Angeles Animal Care and Control Center","street":"11950 Missouri Avenue","city":"Los
+        Angeles","state":"CA","postalcode":"90025","country":"United States","phone":"(888)
+        452-7381","url":"http:\/\/www.laanimalservices.com","serveAreas":"Please contact
+        shelter for details.","adoptionProcess":"Please contact shelter for details.","services":"Please
+        contact shelter for details.","meetPets":[""],"type":"Shelter","lat":34.0454,"lon":-118.444,"coordinates":"34.0454,
+        -118.444","citystate":"Los Angeles, CA"}},{"type":"orgs","id":"2013","attributes":{"name":"South
+        Los Angeles Animal Care and Control Center","street":"3612 11th Avenue","city":"Los
+        Angeles","state":"CA","postalcode":"90018","country":"United States","phone":"(888)
+        452-7381","url":"http:\/\/www.laanimalservices.com","serveAreas":"Please contact
+        shelter for details.","adoptionProcess":"Please contact shelter for details.","services":"Please
+        contact shelter for details.","meetPets":[""],"type":"Shelter","lat":34.0273,"lon":-118.318,"coordinates":"34.0273,
+        -118.318","citystate":"Los Angeles, CA"}},{"type":"orgs","id":"2014","attributes":{"name":"North
+        Central Animal Care and Control","street":"3201 Lacy Street","city":"Los Angeles","state":"CA","postalcode":"90031","country":"United
+        States","phone":"(888) 452-7381","url":"http:\/\/www.laanimalservices.com","serveAreas":"Please
+        contact shelter for details.","adoptionProcess":"Please contact shelter for
+        details.","services":"Please contact shelter for details.","meetPets":[""],"type":"Shelter","lat":34.0791,"lon":-118.218,"coordinates":"34.0791,
+        -118.218","citystate":"Los Angeles, CA"}}]}"
+    http_version: 
+  recorded_at: Sat, 28 Dec 2019 17:58:16 GMT
+recorded_with: VCR 5.0.0

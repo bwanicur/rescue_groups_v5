@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RescueGroupsV5
   module Fields
     module Contact
@@ -11,7 +13,7 @@ module RescueGroupsV5
         phoneCell
         phoneHome
         salutation
-      ]
+      ].freeze
     end
   end
 end

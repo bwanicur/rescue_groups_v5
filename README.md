@@ -33,7 +33,7 @@ options = {
     animals: [ :name, :breedPrimary ],
     orgs: [ :name, :city ]
   },
-  zipcode: '92107',
+  postalcode: '92107',
   radius_in_miles: 15
 }
 result = client.search_animals(options)
@@ -65,7 +65,7 @@ options[:fields] = {
 ### Sort:
 An array of hashes with the following keys:
 
-- object: (aniamls, organizations, events)
+- object: (aniamls, organizations)
 - sort_value: they attribute to use for sorting
 - direction:  sort direction
 
@@ -118,7 +118,7 @@ _Only available on search requests_
 The following "global" filters are available to search by location.
 
 ```ruby
-options[:zipcode] = '92107' # string zipcode
+options[:postalcode] = '92107' # string postalcode
 ```
 
 ```ruby
@@ -130,7 +130,7 @@ _Only available on search requests_
 
 An array of hashes containing the following keys:
 
-- object: animals, organizations, events
+- object: animals, organizations
 - field_name: the object's field
 - operation: see list of operations [here](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/services/filter_builder.rb)
 - value

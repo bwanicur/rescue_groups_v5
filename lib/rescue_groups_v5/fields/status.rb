@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module RescueGroupsV5
   module StatusFields
-    FIELDS = %[
+    FIELDS = %(
       description
       id
       name
-    ]
+    )
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RescueGroupsV5
   module Fields
     module Org
@@ -29,7 +31,7 @@ module RescueGroupsV5
         street
         type
         url
-      ]
+      ].freeze
     end
   end
 end

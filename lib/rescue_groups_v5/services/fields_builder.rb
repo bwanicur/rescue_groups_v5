@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RescueGroupsV5
   module Services
     class FieldsBuilder
@@ -6,7 +8,7 @@ module RescueGroupsV5
         data.each do |field_name, attributes|
           fields_strs << "fields[#{field_name}]=#{attributes.join(',')}"
         end
-        fields_strs.join('&')
+        fields_strs.join("&")
       end
     end
   end

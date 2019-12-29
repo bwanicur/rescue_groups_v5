@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rescuegroups.org/v5/public/orgs/105/animals/search?fields%5Banimals%5D=breedPrimary,ageGroup,name
+    body:
+      encoding: UTF-8
+      string: "{"data":{"filters":[{"fieldName":"animals.breedPrimary","operation":"equals","criteria":"Shepherd"},{"fieldName":"animals.ageGroup","operation":"equals","criteria":"Adult"}]}}"
+    headers:
+      User-Agent:
+      - Faraday v0.17.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - T5la0hn8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 29 Dec 2019 00:38:23 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - POST, GET, DELETE, PATCH, PUT, OPTIONS
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Content-Length:
+      - "2945"
+      Connection:
+      - close
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: "{"meta":{"count":3950,"countReturned":25,"pageReturned":1,"limit":25,"pages":158,"requestTime":1577579903,"responseTime":1577579903,"responseMs":69,"transactionId":"NOQweGGaISTe"},"data":[{"type":"animals","id":"10005058","attributes":{"breedPrimary":"Rat
+        Terrier","ageGroup":"Young","name":"Charlie"}},{"type":"animals","id":"10005088","attributes":{"breedPrimary":"Australian
+        Shepherd","ageGroup":"Baby","name":"Roxy"}},{"type":"animals","id":"10005214","attributes":{"breedPrimary":"Pomeranian","ageGroup":"Baby","name":"Kippy"}},{"type":"animals","id":"10005226","attributes":{"breedPrimary":"Pomeranian","ageGroup":"Baby","name":"Kenny"}},{"type":"animals","id":"10017","attributes":{"breedPrimary":"Pug","ageGroup":"Adult","name":"Pugsley"}},{"type":"animals","id":"10018","attributes":{"breedPrimary":"Labrador
+        Retriever","ageGroup":"Young","name":"Shepherd Lab mix Trio"}},{"type":"animals","id":"10020","attributes":{"breedPrimary":"Shepherd","ageGroup":"Young","name":"Demi"}},{"type":"animals","id":"10021","attributes":{"breedPrimary":"Beagle","ageGroup":"Young","name":"Lola"}},{"type":"animals","id":"10022","attributes":{"breedPrimary":"Domestic
+        Medium Hair","ageGroup":"Young","name":"Emerald & Ebony"}},{"type":"animals","id":"10023","attributes":{"breedPrimary":"Chihuahua","ageGroup":"Young","name":"Matzi"}},{"type":"animals","id":"10037666","attributes":{"breedPrimary":"Rat
+        Terrier","ageGroup":"Adult","name":"Casper"}},{"type":"animals","id":"10053978","attributes":{"breedPrimary":"Domestic
+        Medium Hair","ageGroup":"Baby","name":"Bow"}},{"type":"animals","id":"10056330","attributes":{"breedPrimary":"Siamese","ageGroup":"Baby","name":"Sophie"}},{"type":"animals","id":"10056348","attributes":{"breedPrimary":"Dachshund","ageGroup":"Adult","name":"Jasmine"}},{"type":"animals","id":"10056367","attributes":{"breedPrimary":"Terrier","ageGroup":"Young","name":"Jocko"}},{"type":"animals","id":"10056381","attributes":{"breedPrimary":"Rat
+        Terrier","ageGroup":"Baby","name":"Sassy"}},{"type":"animals","id":"10056387","attributes":{"breedPrimary":"Rat
+        Terrier","ageGroup":"Baby","name":"Bruno"}},{"type":"animals","id":"10081","attributes":{"breedPrimary":"Beagle","ageGroup":"Young","name":"Lancelot"}},{"type":"animals","id":"10081520","attributes":{"breedPrimary":"Beagle","ageGroup":"Baby","name":"Jack"}},{"type":"animals","id":"10082","attributes":{"breedPrimary":"Chihuahua","ageGroup":"Young","name":"Sweetie
+        Pie"}},{"type":"animals","id":"10083","attributes":{"breedPrimary":"Pomeranian","ageGroup":"Young","name":"Sally"}},{"type":"animals","id":"10084","attributes":{"breedPrimary":"Dachshund","ageGroup":"Young","name":"Ginger"}},{"type":"animals","id":"1008435","attributes":{"breedPrimary":"Keeshond","name":"Koffee
+        and Kalua"}},{"type":"animals","id":"1008447","attributes":{"breedPrimary":"Keeshond","name":"Kalua"}},{"type":"animals","id":"1008459","attributes":{"breedPrimary":"Keeshond","name":"Koffee"}}]}"
+    http_version: 
+  recorded_at: Sun, 29 Dec 2019 00:38:23 GMT
+recorded_with: VCR 5.0.0
