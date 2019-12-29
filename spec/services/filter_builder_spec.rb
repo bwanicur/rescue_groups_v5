@@ -8,19 +8,19 @@ RSpec.describe RescueGroupsV5::Services::FilterBuilder do
         {
           object: :animals,
           field_name: :age,
-          operation: :less_than,
-          value: 10
+          operation: 'less_than',
+          criteria: 10
         },
         {
           object: :animals,
           field_name: :color,
-          value: 'brown'
+          criteria: 'brown'
         },
         {
           object: :animals,
           field_name: :breed,
           operation: :contains,
-          value: 'Pitbull'
+          criteria: 'Pitbull'
         }
       ]
     end
@@ -28,13 +28,13 @@ RSpec.describe RescueGroupsV5::Services::FilterBuilder do
       res = described_class.run(raw_filters_data)
       expect(res[0][:fieldName]).to eq('animals.age')
       expect(res[0][:operation]).to eq('lessthan')
-      expect(res[0][:criterion]).to eq(10)
+      expect(res[0][:criteria]).to eq(10)
       expect(res[1][:fieldName]).to eq('animals.color')
       expect(res[1][:operation]).to eq('equals')
-      expect(res[1][:criterion]).to eq('brown')
+      expect(res[1][:criteria]).to eq('brown')
       expect(res[2][:fieldName]).to eq('animals.breed')
       expect(res[2][:operation]).to eq('contains')
-      expect(res[2][:criterion]).to eq('Pitbull')
+      expect(res[2][:criteria]).to eq('Pitbull')
     end
   end
 end

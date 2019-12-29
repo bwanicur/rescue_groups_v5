@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rescuegroups.org/v5/public/animals/search?fields%5Banimals%5D=name,breedPrimary&fields%5Borgs%5D=name,city,state&include=orgs&limit=30
+    body:
+      encoding: UTF-8
+      string: '{"data":{"filters":[{"fieldName":"animals.breedPrimary","operation":"contains","criteria":"Staffordshire"},{"fieldName":"statuses.name","operation":"equals","criteria":"Available"}],"filterRadius":{"postalcode":"92107","miles":100}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.17.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - T5la0hn8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 28 Dec 2019 17:03:51 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - POST, GET, DELETE, PATCH, PUT, OPTIONS
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Content-Length:
+      - '7192'
+      Connection:
+      - close
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"count":148,"countReturned":30,"pageReturned":1,"limit":30,"pages":5,"requestTime":1577552631,"responseTime":1577552631,"responseMs":20,"transactionId":"BgjtByFCPuXa"},"data":[{"type":"animals","id":"11088874","attributes":{"distance":5.07,"name":"Sugar","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"1034"}]}}},{"type":"animals","id":"11103925","attributes":{"distance":67.74,"name":"Sage","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"5136"}]}}},{"type":"animals","id":"11284568","attributes":{"distance":5.07,"name":"Leo
+        (aka Feo)","breedPrimary":"American Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"1034"}]}}},{"type":"animals","id":"11352207","attributes":{"distance":57.96,"name":"Luna","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"637"}]}}},{"type":"animals","id":"11444832","attributes":{"distance":5.07,"name":"Pearl","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"1034"}]}}},{"type":"animals","id":"11467577","attributes":{"distance":5.07,"name":"Pepper
+        *Facilitated Adoption*","breedPrimary":"American Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"1034"}]}}},{"type":"animals","id":"11763626","attributes":{"distance":95.27,"name":"Tequila","breedPrimary":"Staffordshire
+        Bull Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"8403"}]}}},{"type":"animals","id":"11820029","attributes":{"distance":5.07,"name":"Scarlett","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"1034"}]}}},{"type":"animals","id":"11882562","attributes":{"distance":5.07,"name":"COURTESY
+        LISTING - Mercedes","breedPrimary":"American Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"1034"}]}}},{"type":"animals","id":"11884590","attributes":{"distance":67.74,"name":"Molly
+        Courtesy post","breedPrimary":"American Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"5136"}]}}},{"type":"animals","id":"11940318","attributes":{"distance":5.07,"name":"Rowdy","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"1034"}]}}},{"type":"animals","id":"12084611","attributes":{"distance":5.07,"name":"Copper
+        - I Need a Foster!","breedPrimary":"American Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"1034"}]}}},{"type":"animals","id":"12091032","attributes":{"distance":57.96,"name":"Jake","breedPrimary":"Staffordshire
+        Bull Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"637"}]}}},{"type":"animals","id":"12097099","attributes":{"distance":57.96,"name":"Leila","breedPrimary":"Staffordshire
+        Bull Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"637"}]}}},{"type":"animals","id":"12332213","attributes":{"distance":67.74,"name":"Willow","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"5136"}]}}},{"type":"animals","id":"12357655","attributes":{"distance":5.07,"name":"Jasper
+        - I Need a Foster!","breedPrimary":"American Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"1034"}]}}},{"type":"animals","id":"12609435","attributes":{"distance":57.96,"name":"Dolly","breedPrimary":"Staffordshire
+        Bull Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"637"}]}}},{"type":"animals","id":"12628240","attributes":{"distance":57.96,"name":"Brandy","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"637"}]}}},{"type":"animals","id":"12634865","attributes":{"distance":57.96,"name":"Delilah","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"637"}]}}},{"type":"animals","id":"12641403","attributes":{"distance":57.96,"name":"Banks","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"637"}]}}},{"type":"animals","id":"12701974","attributes":{"distance":67.74,"name":"Risa","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"5136"}]}}},{"type":"animals","id":"12746156","attributes":{"distance":81.66,"name":"Rosie
+        The Tiny Dazzler","breedPrimary":"American Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"5446"}]}}},{"type":"animals","id":"12835690","attributes":{"distance":81.66,"name":"Xena","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"5446"}]}}},{"type":"animals","id":"12847862","attributes":{"distance":57.96,"name":"Willie","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"637"}]}}},{"type":"animals","id":"12902154","attributes":{"distance":5.07,"name":"Bubba
+        - I Need a Foster!","breedPrimary":"American Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"1034"}]}}},{"type":"animals","id":"12953218","attributes":{"distance":60.43,"name":"Hailey","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"8832"}]}}},{"type":"animals","id":"12956837","attributes":{"distance":60.43,"name":"Riley","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"8832"}]}}},{"type":"animals","id":"12996419","attributes":{"distance":67.74,"name":"Yara","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"5136"}]}}},{"type":"animals","id":"12998218","attributes":{"distance":5.07,"name":"King
+        *Senior Star*","breedPrimary":"American Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"1034"}]}}},{"type":"animals","id":"13108143","attributes":{"distance":82.85,"name":"Casper","breedPrimary":"American
+        Staffordshire Terrier"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"105"}]}}}],"included":[{"type":"orgs","id":"1034","attributes":{"name":"It''s
+        The Pits","city":"San Diego","state":"CA"},"links":{"self":"\/public\/orgs\/1034"}},{"type":"orgs","id":"5136","attributes":{"name":"The
+        Little Red Dog, Inc","city":"Lake Forest","state":"CA"},"links":{"self":"\/public\/orgs\/5136"}},{"type":"orgs","id":"637","attributes":{"name":"A
+        Wish for Animals","city":"Dana Point","state":"CA"},"links":{"self":"\/public\/orgs\/637"}},{"type":"orgs","id":"8403","attributes":{"name":"Humane
+        Society of Imperial Valley","city":"El Centro","state":"CA"},"links":{"self":"\/public\/orgs\/8403"}},{"type":"orgs","id":"5446","attributes":{"name":"4Life
+        Animal Rescue","city":"Orange","state":"CA"},"links":{"self":"\/public\/orgs\/5446"}},{"type":"orgs","id":"8832","attributes":{"name":"Doggie
+        Bonez Inc","city":"San Juan Capistrano","state":"CA"},"links":{"self":"\/public\/orgs\/8832"}},{"type":"orgs","id":"105","attributes":{"name":"Benevolent
+        Animal Rescue Committee, Inc","city":"Cherry Valley","state":"CA"},"links":{"self":"\/public\/orgs\/105"}}]}'
+    http_version: 
+  recorded_at: Sat, 28 Dec 2019 17:03:51 GMT
+recorded_with: VCR 5.0.0

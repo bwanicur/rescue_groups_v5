@@ -3,6 +3,6 @@ module RescueGroupsV5
     FIELDS = %w[
       id
       name
-    ]
+    ].freeze
   end
 end

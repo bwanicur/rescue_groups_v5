@@ -29,7 +29,7 @@ module RescueGroupsV5
         street
         type
         url
-      ]
+      ].freeze
     end
   end
 end

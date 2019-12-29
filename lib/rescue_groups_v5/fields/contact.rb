@@ -11,7 +11,7 @@ module RescueGroupsV5
         phoneCell
         phoneHome
         salutation
-      ]
+      ].freeze
     end
   end
 end

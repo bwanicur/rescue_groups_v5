@@ -1,0 +1,352 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rescuegroups.org/v5/public/orgs/105/animals?limit=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - T5la0hn8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 29 Dec 2019 00:12:42 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - POST, GET, DELETE, PATCH, PUT, OPTIONS
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"count":3950,"countReturned":20,"pageReturned":1,"limit":20,"pages":198,"requestTime":1577578362,"responseTime":1577578362,"responseMs":41,"transactionId":"wUAMFAilLRjP"},"data":[{"type":"animals","id":"10005058","attributes":{"adoptionFeeString":"$225
+        includes neuter n vaccines","ageGroup":"Young","breedString":"Rat Terrier
+        \/ Mixed (short coat)","breedPrimary":"Rat Terrier","breedPrimaryId":186,"isBreedMixed":true,"coatLength":"Short","descriptionHtml":"I
+        am a very happy little 9 month puppy who is looking for a new forever home.
+        &nbsp;My previous owner said that his big dogs were jealous of me and brought
+        me to BARCPETRESCUE to find a loving home. &nbsp;I absolutely love people
+        and I like to play with toys. Please call 951-845-1513 to make an appointment
+        to meet me! I promise that I will love you and give you lots of doggy kisses!<img
+        src=\"https:\/\/tracker.rescuegroups.org\/pet?10005058\" width=\"0\" height=\"0\"
+        alt=\"\" \/>","descriptionText":"I am a very happy little 9 month puppy who
+        is looking for a new forever home. &nbsp;My previous owner said that his big
+        dogs were jealous of me and brought me to BARCPETRESCUE to find a loving home.
+        &nbsp;I absolutely love people and I like to play with toys. Please call 951-845-1513
+        to make an appointment to meet me! I promise that I will love you and give
+        you lots of doggy kisses!","priority":10,"name":"Charlie","pictureCount":2,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10005\/10005058\/34751815_100x75.jpg","qualities":[""],"rescueId":"3977","sex":"Male","sizeGroup":"Small","slug":"adopt-charlie-rat-terrier-dog","isSponsorable":true,"summary":"I
+        am a happy 9 month puppy looking for a new home!","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10005058","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10005058","createdDate":"2016-05-15T01:06:33Z","updatedDate":"2016-06-01T23:25:12Z"}},{"type":"animals","id":"10005088","attributes":{"adoptionFeeString":"$250.00
+        includes spay and shots","ageGroup":"Baby","breedString":"Australian Shepherd
+        \/ Mixed (medium coat)","breedPrimary":"Australian Shepherd","breedPrimaryId":86,"isBreedMixed":true,"coatLength":"Medium","descriptionHtml":"I
+        am a five month puppy who is really a happy dog. &nbsp;I need a forever home
+        where I can run and play and enjoy my active life. &nbsp;Since I am only five
+        months old, I am sure that I would be happy with another dog friend. &nbsp;Exercise
+        is what I do need. &nbsp;You can make an appointment to meet me by calling
+        951-845-1513. &nbsp;We can become great friends!<img src=\"https:\/\/tracker.rescuegroups.org\/pet?10005088\"
+        width=\"0\" height=\"0\" alt=\"\" \/>","descriptionText":"I am a five month
+        puppy who is really a happy dog. &nbsp;I need a forever home where I can run
+        and play and enjoy my active life. &nbsp;Since I am only five months old,
+        I am sure that I would be happy with another dog friend. &nbsp;Exercise is
+        what I do need. &nbsp;You can make an appointment to meet me by calling 951-845-1513.
+        &nbsp;We can become great friends!","priority":10,"name":"Roxy","pictureCount":2,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10005\/10005088\/34656650_100x92.jpg","qualities":[""],"rescueId":"3978","sex":"Female","sizeGroup":"Medium","slug":"adopt-roxy-australian-shepherd-dog","isSponsorable":true,"summary":"I
+        am a happy 5 month puppy","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10005088","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10005088","createdDate":"2016-05-15T01:26:54Z","updatedDate":"2016-05-19T16:58:16Z"}},{"type":"animals","id":"10005214","attributes":{"adoptionFeeString":"$250
+        includes neuter and vaccines","ageGroup":"Baby","breedString":"Pomeranian
+        \/ Cocker Spaniel \/ Mixed (medium coat)","breedPrimary":"Pomeranian","breedPrimaryId":182,"breedSecondary":"Cocker
+        Spaniel","breedSecondaryId":123,"isBreedMixed":true,"coatLength":"Medium","descriptionHtml":"I
+        am Kippy and I am a small three month old puppy. &nbsp;Along with my brother
+        &nbsp;Kenny, I was rescued by a very kind Barc volunteer family when we were
+        very tiny puppies. &nbsp;We are both looking for our forever homes where we
+        will have a family to love and play with us. &nbsp;We love toys. &nbsp;To
+        meet us, please file an online application to adopt us. &nbsp;You can also
+        call my foster mom at 909-957-4295 or the Barcline at 951-845-1513.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?10005214\"
+        width=\"0\" height=\"0\" alt=\"\" \/>","descriptionText":"I am Kippy and I
+        am a small three month old puppy. &nbsp;Along with my brother &nbsp;Kenny,
+        I was rescued by a very kind Barc volunteer family when we were very tiny
+        puppies. &nbsp;We are both looking for our forever homes where we will have
+        a family to love and play with us. &nbsp;We love toys. &nbsp;To meet us, please
+        file an online application to adopt us. &nbsp;You can also call my foster
+        mom at 909-957-4295 or the Barcline at 951-845-1513.","priority":10,"name":"Kippy","pictureCount":1,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10005\/10005214\/34656975_100x93.jpg","qualities":[""],"rescueId":"3979","sex":"Male","sizeGroup":"Small","slug":"adopt-kippy-pomeranian-dog","isSponsorable":true,"summary":"Kippy
+        is cute puppy!","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10005214","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10005214","createdDate":"2016-05-15T01:51:17Z","updatedDate":"2016-06-08T16:40:44Z"}},{"type":"animals","id":"10005226","attributes":{"adoptionFeeString":"$250
+        includes neuter and vaccines","ageGroup":"Baby","breedString":"Pomeranian
+        \/ Cocker Spaniel \/ Mixed (medium coat)","breedPrimary":"Pomeranian","breedPrimaryId":182,"breedSecondary":"Cocker
+        Spaniel","breedSecondaryId":123,"isBreedMixed":true,"coatLength":"Medium","descriptionHtml":"Hello!
+        &nbsp;I am Kenny and I am a three month old puppy. &nbsp;My brother Kippy
+        and I were rescued by a kind Barc volunteer family when we were tiny puppies.
+        &nbsp;We are very happy and we play together. Now I am ready to find my forever
+        family that will exercise and play with me. &nbsp;If you would like to meet
+        me, please file an online application to adopt me. &nbsp;You can also call
+        my foster mom at 909-957-4295 or you can also call the Barcline at <br \/>951-845-1513.
+        I promise that I will love you.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?10005226\"
+        width=\"0\" height=\"0\" alt=\"\" \/>","descriptionText":"Hello! &nbsp;I am
+        Kenny and I am a three month old puppy. &nbsp;My brother Kippy and I were
+        rescued by a kind Barc volunteer family when we were tiny puppies. &nbsp;We
+        are very happy and we play together. Now I am ready to find my forever family
+        that will exercise and play with me. &nbsp;If you would like to meet me, please
+        file an online application to adopt me. &nbsp;You can also call my foster
+        mom at 909-957-4295 or you can also call the Barcline at 951-845-1513. I promise
+        that I will love you.","priority":10,"name":"Kenny","pictureCount":1,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10005\/10005226\/34657260_100x95.jpg","qualities":[""],"rescueId":"3980","sex":"Male","sizeGroup":"Small","slug":"adopt-kenny-pomeranian-dog","isSponsorable":true,"summary":"I
+        am a three month old male puppy.","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10005226","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10005226","createdDate":"2016-05-15T02:08:42Z","updatedDate":"2016-06-19T03:14:48Z"}},{"type":"animals","id":"10017","attributes":{"activityLevel":"Highly
+        Active","ageGroup":"Adult","ageString":"15 Years 10 Months","birthDate":"2003-09-29T00:00:00Z","breedString":"Pug","breedPrimary":"Pug","breedPrimaryId":185,"colorDetails":"Tan
+        & Black","descriptionHtml":"Pugsley is a pure bred Pug! Look at that face!
+        He''s a great dog. He''s about 2 years old. Pugsley needs an experienced dog
+        owner. Although he''s not at all snappy, he should go to a home with no children
+        under 6. Pugsley gets along well with other dogs. He really does have a great
+        personality. Is he right for you?<br><br>Notes for all animals: <br><br>We
+        can only adopt to homes within San Bernardino and Riverside Counties. <br><br>Please
+        read our Adoption Information page as many questions are answered there. <br><br>http:\/\/barconline.com\/info\/adoption<br><img
+        src=\"https:\/\/tracker.rescuegroups.org\/pet?10017\" width=\"0\" height=\"0\"
+        alt=\"\" \/>","descriptionText":"Pugsley is a pure bred Pug! Look at that
+        face! He''s a great dog. He''s about 2 years old. Pugsley needs an experienced
+        dog owner. Although he''s not at all snappy, he should go to a home with no
+        children under 6. Pugsley gets along well with other dogs. He really does
+        have a great personality. Is he right for you?Notes for all animals: We can
+        only adopt to homes within San Bernardino and Riverside Counties. Please read
+        our Adoption Information page as many questions are answered there. http:\/\/barconline.com\/info\/adoption","isDogsOk":true,"priority":10,"isHousetrained":true,"isKidsOk":true,"name":"Pugsley","newPeopleReaction":"Friendly","ownerExperience":"None","pictureCount":1,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10\/10017\/15858_100x100.jpg","qualities":[""],"rescueId":"pugsley0905","sex":"Male","sizeGroup":"Medium","sizeUOM":"Centimeters","slug":"adopt-pugsley-pug-dog","isSpecialNeeds":true,"specialNeedsDetails":"Pugsley
+        must have a home with no cats\n ","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10017","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10017","createdDate":"2005-09-28T20:04:32Z","updatedDate":"2005-10-09T01:07:15Z"}},{"type":"animals","id":"10018","attributes":{"activityLevel":"Highly
+        Active","ageGroup":"Young","ageString":"13 Years 11 Months","birthDate":"2005-07-30T00:00:00Z","breedString":"Labrador
+        Retriever \/ Shepherd","breedPrimary":"Labrador Retriever","breedPrimaryId":162,"breedSecondary":"Shepherd","breedSecondaryId":411,"colorDetails":"Brown
+        & Black","descriptionHtml":"UPDATE * 1 black male left *  These little ones
+        are so adorable!! The brown pup is a female. The other 2 are her brothers.
+        They will be medium to large sized when full grown. These cuties are about
+        9 weeks old. They will make excellent family dogs.<br><br>Notes for all animals:
+        <br><br>We can only adopt to homes within San Bernardino and Riverside Counties.
+        <br><br>Please read our Adoption Information page as many questions are answered
+        there. <br><br>http:\/\/barconline.com\/info\/adoption<br><img src=\"https:\/\/tracker.rescuegroups.org\/pet?10018\"
+        width=\"0\" height=\"0\" alt=\"\" \/>","descriptionText":"UPDATE * 1 black
+        male left *  These little ones are so adorable!! The brown pup is a female.
+        The other 2 are her brothers. They will be medium to large sized when full
+        grown. These cuties are about 9 weeks old. They will make excellent family
+        dogs.Notes for all animals: We can only adopt to homes within San Bernardino
+        and Riverside Counties. Please read our Adoption Information page as many
+        questions are answered there. http:\/\/barconline.com\/info\/adoption","isDogsOk":true,"priority":2,"isKidsOk":true,"name":"Shepherd
+        Lab mix Trio","newPeopleReaction":"Friendly","ownerExperience":"None","pictureCount":2,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10\/10018\/21008_100x146.jpg","qualities":[""],"rescueId":"sheplabtrio0905","sex":"Female","sizeGroup":"Large","sizeUOM":"Centimeters","slug":"adopt-shepherd-lab-mix-trio-labrador-retriever-dog","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10018","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10018","createdDate":"2005-09-28T20:08:45Z","updatedDate":"2005-12-18T23:43:41Z"}},{"type":"animals","id":"10020","attributes":{"activityLevel":"Highly
+        Active","ageGroup":"Young","ageString":"13 Years 11 Months","birthDate":"2005-07-30T00:00:00Z","breedString":"Shepherd","breedPrimary":"Shepherd","breedPrimaryId":411,"colorDetails":"brown","descriptionHtml":"How
+        cute is Demi?! She is so sweet, so loving already. She is about 10 weeks old.
+        When full grown Demi will be about 35lbs. Come meet her and see if she''d
+        be perfect for your family!<br><br>Notes for all animals: <br><br>We can only
+        adopt to homes within San Bernardino and Riverside Counties. <br><br>Please
+        read our Adoption Information page as many questions are answered there. <br><br>http:\/\/barconline.com\/info\/adoption<br><img
+        src=\"https:\/\/tracker.rescuegroups.org\/pet?10020\" width=\"0\" height=\"0\"
+        alt=\"\" \/>","descriptionText":"How cute is Demi?! She is so sweet, so loving
+        already. She is about 10 weeks old. When full grown Demi will be about 35lbs.
+        Come meet her and see if she''d be perfect for your family!Notes for all animals:
+        We can only adopt to homes within San Bernardino and Riverside Counties. Please
+        read our Adoption Information page as many questions are answered there. http:\/\/barconline.com\/info\/adoption","isDogsOk":true,"priority":1,"isKidsOk":true,"name":"Demi","newPeopleReaction":"Friendly","ownerExperience":"None","pictureCount":2,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10\/10020\/36157_100x84.jpg","qualities":[""],"rescueId":"Demi0905","sex":"Female","sizeGroup":"Medium","sizeUOM":"Centimeters","slug":"adopt-demi-shepherd-dog","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10020","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10020","createdDate":"2005-09-28T20:11:42Z","updatedDate":"2006-03-13T23:10:53Z"}},{"type":"animals","id":"10021","attributes":{"activityLevel":"Highly
+        Active","ageGroup":"Young","ageString":"14 Years 10 Months","birthDate":"2004-09-28T00:00:00Z","breedString":"Beagle
+        \/ Chihuahua","breedPrimary":"Beagle","breedPrimaryId":90,"breedSecondary":"Chihuahua","breedSecondaryId":118,"colorDetails":"tan
+        & white","descriptionHtml":"Lola is a great girl. She''s about 10 months old
+        and very active. Lola weighs about 15 pounds. She gets along with everyone
+        and is great with other dogs. Lola is about 1 year old. Come meet her and
+        see if you can make her a happy home!<br><img src=\"https:\/\/tracker.rescuegroups.org\/pet?10021\"
+        width=\"0\" height=\"0\" alt=\"\" \/>","descriptionText":"Lola is a great
+        girl. She''s about 10 months old and very active. Lola weighs about 15 pounds.
+        She gets along with everyone and is great with other dogs. Lola is about 1
+        year old. Come meet her and see if you can make her a happy home!","isDogsOk":true,"priority":7,"name":"Lola","newPeopleReaction":"Friendly","ownerExperience":"None","pictureCount":3,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10\/10021\/27086_100x182.jpg","qualities":[""],"rescueId":"lola0905","sex":"Female","sizeCurrent":15,"sizeGroup":"Small","sizeUOM":"Pounds","slug":"adopt-lola-beagle-dog","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10021","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10021","createdDate":"2005-09-28T20:15:12Z","updatedDate":"2005-12-28T04:29:35Z"}},{"type":"animals","id":"10022","attributes":{"ageGroup":"Young","ageString":"14
+        Years","birthDate":"2005-06-30T00:00:00Z","breedString":"Domestic Medium Hair-black
+        and white \/ Persian","breedPrimary":"Domestic Medium Hair","breedPrimaryId":29,"breedSecondary":"Persian","breedSecondaryId":53,"colorDetails":"Black","descriptionHtml":"These
+        2 sisters are beautiful. They are a neat black color, with silver highlights
+        and small amounts of white\/grey. They have wonderful green eyes. They were
+        bottle fed since the age of 3 weeks old after being found at Petsmart. They
+        are very friendly and ready to find their very own forever homes.<br><br>Notes
+        for all animals: <br><br>We can only adopt to homes within San Bernardino
+        and Riverside Counties. <br><br>Please read our Adoption Information page
+        as many questions are answered there. <br><br>http:\/\/barconline.com\/info\/adoption<br><img
+        src=\"https:\/\/tracker.rescuegroups.org\/pet?10022\" width=\"0\" height=\"0\"
+        alt=\"\" \/>","descriptionText":"These 2 sisters are beautiful. They are a
+        neat black color, with silver highlights and small amounts of white\/grey.
+        They have wonderful green eyes. They were bottle fed since the age of 3 weeks
+        old after being found at Petsmart. They are very friendly and ready to find
+        their very own forever homes.Notes for all animals: We can only adopt to homes
+        within San Bernardino and Riverside Counties. Please read our Adoption Information
+        page as many questions are answered there. http:\/\/barconline.com\/info\/adoption","priority":3,"indoorOutdoor":"Indoor
+        Only","name":"Emerald & Ebony","newPeopleReaction":"Friendly","ownerExperience":"None","pictureCount":1,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10\/10022\/15863_100x80.jpg","qualities":[""],"rescueId":"EandE0905","sex":"Female","sizeGroup":"Small","sizeUOM":"Centimeters","slug":"adopt-emerald-ebony-domestic-medium-hair-cat","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10022","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10022","createdDate":"2005-09-28T20:19:26Z","updatedDate":"2005-10-28T15:04:01Z"}},{"type":"animals","id":"10023","attributes":{"ageGroup":"Young","ageString":"14
+        Years 7 Months","birthDate":"2004-12-02T00:00:00Z","breedString":"Chihuahua","breedPrimary":"Chihuahua","breedPrimaryId":118,"colorDetails":"White","descriptionHtml":"Matzi
+        loves attention. He''s so sweet!! He is about 10 months old and about 15 pounds.
+        He needs a home with no small children. He''s a cute little guy sure to steal
+        his new owner''s heart. His previous owner didn''t have the time to devote
+        to Matzi, but wants him to have a loving home with an owner who does have
+        the time. See if Matzi is just for you!!  <br><br>Notes for all animals: <br><br>We
+        can only adopt to homes within San Bernardino and Riverside Counties. <br><br>Please
+        read our Adoption Information page as many questions are answered there. <br><br>http:\/\/barconline.com\/info\/adoption<br><img
+        src=\"https:\/\/tracker.rescuegroups.org\/pet?10023\" width=\"0\" height=\"0\"
+        alt=\"\" \/>","descriptionText":"Matzi loves attention. He''s so sweet!! He
+        is about 10 months old and about 15 pounds. He needs a home with no small
+        children. He''s a cute little guy sure to steal his new owner''s heart. His
+        previous owner didn''t have the time to devote to Matzi, but wants him to
+        have a loving home with an owner who does have the time. See if Matzi is just
+        for you!!  Notes for all animals: We can only adopt to homes within San Bernardino
+        and Riverside Counties. Please read our Adoption Information page as many
+        questions are answered there. http:\/\/barconline.com\/info\/adoption","isDogsOk":true,"priority":7,"isKidsOk":true,"name":"Matzi","newPeopleReaction":"Friendly","ownerExperience":"None","pictureCount":3,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10\/10023\/19331_100x174.jpg","qualities":[""],"rescueId":"matzi0905","sex":"Male","sizeCurrent":15,"sizeGroup":"Small","sizeUOM":"Pounds","slug":"adopt-matzi-chihuahua-dog","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10023","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10023","createdDate":"2005-09-28T20:24:10Z","updatedDate":"2005-12-18T23:44:05Z"}},{"type":"animals","id":"10037666","attributes":{"adoptionFeeString":"$225.00","ageGroup":"Adult","breedString":"Rat
+        Terrier \/ Mixed (short coat)","breedPrimary":"Rat Terrier","breedPrimaryId":186,"isBreedMixed":true,"isCatsOk":true,"coatLength":"Short","descriptionHtml":"Hi,
+        my name is Casper, and I am a 2 year old Rat Terrier Mix. My old owner could
+        no longer take care of me anymore, so I am at BARC to find my new forever
+        home. I can be shy at first, but once you spend time with me, I will prove
+        to be a super sweet and affectionate boy. I am good with other dogs and cats,
+        and am very friendly with kids. I am also housebroken and enjoy car rides!
+        I am perfect for any family.<span>&nbsp;Please call 951-845-1513 for more
+        information about me.<\/span><br \/><img src=\"https:\/\/tracker.rescuegroups.org\/pet?9803383&amp;a=&amp;h=\"
+        alt=\"\" width=\"0\" height=\"0\" \/><img src=\"https:\/\/tracker.rescuegroups.org\/pet?10037666\"
+        width=\"0\" height=\"0\" alt=\"\" \/>","descriptionText":"Hi, my name is Casper,
+        and I am a 2 year old Rat Terrier Mix. My old owner could no longer take care
+        of me anymore, so I am at BARC to find my new forever home. I can be shy at
+        first, but once you spend time with me, I will prove to be a super sweet and
+        affectionate boy. I am good with other dogs and cats, and am very friendly
+        with kids. I am also housebroken and enjoy car rides! I am perfect for any
+        family.&nbsp;Please call 951-845-1513 for more information about me.","isDogsOk":true,"priority":10,"isKidsOk":true,"name":"Casper","pictureCount":1,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10037\/10037666\/34898220_100x75.jpg","qualities":[""],"rescueId":"3981","sex":"Male","sizeGroup":"Small","slug":"adopt-casper-rat-terrier-dog","isSponsorable":true,"summary":"2
+        year old Rat Terrier Mix","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10037666","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10037666","createdDate":"2016-05-24T17:05:46Z","updatedDate":"2016-10-12T15:47:42Z"}},{"type":"animals","id":"10053978","attributes":{"adoptionFeeString":"$75
+        includes neuter and vaccines","ageGroup":"Baby","breedString":"Domestic Medium
+        Hair \/ Mixed","breedPrimary":"Domestic Medium Hair","breedPrimaryId":29,"isBreedMixed":true,"isCatsOk":true,"descriptionHtml":"Bow
+        is a sweet lil 8 week old kitten who indeed had a adventurous beginning his
+        mommy gave birth to him in a boat! There he lay quietly with mommy and siblings
+        til one day they were discovered and brought in front the cool night air to
+        sleep in a warm bed with kitty toys to play with! Now Bow is ready to find
+        his new home! Text 909 957 4295 for more info or www barconline.com<img src=\"https:\/\/tracker.rescuegroups.org\/pet?10053978\"
+        width=\"0\" height=\"0\" alt=\"\" \/>","descriptionText":"Bow is a sweet lil
+        8 week old kitten who indeed had a adventurous beginning his mommy gave birth
+        to him in a boat! There he lay quietly with mommy and siblings til one day
+        they were discovered and brought in front the cool night air to sleep in a
+        warm bed with kitty toys to play with! Now Bow is ready to find his new home!
+        Text 909 957 4295 for more info or www barconline.com","priority":10,"name":"Bow","pictureCount":1,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10053\/10053978\/35025544_100x168.jpg","qualities":[""],"rescueId":"3982","sex":"Male","slug":"adopt-bow-domestic-medium-hair-cat","isSponsorable":true,"trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10053978","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10053978","createdDate":"2016-05-28T16:46:55Z","updatedDate":"2016-07-28T04:15:43Z"}},{"type":"animals","id":"10056330","attributes":{"adoptionFeeString":"$75.00
+        including altering plus shots","ageGroup":"Baby","availableDate":"2016-05-28T00:00:00Z","breedString":"Siamese
+        \/ Mixed (short coat)","breedPrimary":"Siamese","breedPrimaryId":59,"isBreedMixed":true,"coatLength":"Short","descriptionHtml":"I
+        am a happy, but lonely 8 week kitten who is looking for my forever home. &nbsp;My
+        siblings have been adopted into happy forever homes, but I am still here at
+        Barc. I promise you that I will be a happy little princess!<br \/>Please fill
+        out an application to adopt me or call 951-845-1513 to make an appointment
+        to meet me.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?10056330\" width=\"0\"
+        height=\"0\" alt=\"\" \/>","descriptionText":"I am a happy, but lonely 8 week
+        kitten who is looking for my forever home. &nbsp;My siblings have been adopted
+        into happy forever homes, but I am still here at Barc. I promise you that
+        I will be a happy little princess!Please fill out an application to adopt
+        me or call 951-845-1513 to make an appointment to meet me.","priority":10,"name":"Sophie","pictureCount":1,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10056\/10056330\/35038204_100x56.jpg","qualities":[""],"rescueId":"3984","sex":"Female","sizeGroup":"Small","slug":"adopt-sophie-siamese-cat","isSponsorable":true,"summary":"I
+        am an 8 week Siamese mix female kitten","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10056330","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10056330","createdDate":"2016-05-29T02:40:23Z","updatedDate":"2016-06-01T23:26:05Z"}},{"type":"animals","id":"10056348","attributes":{"adoptedDate":"2016-10-04T00:00:00Z","adoptionFeeString":"$225.00
+        includes spay and shots","ageGroup":"Adult","availableDate":"2016-05-28T00:00:00Z","breedString":"Dachshund
+        \/ Chihuahua \/ Mixed (short coat)","breedPrimary":"Dachshund","breedPrimaryId":127,"breedSecondary":"Chihuahua","breedSecondaryId":118,"isBreedMixed":true,"coatLength":"Short","descriptionHtml":"I
+        am the mama for Kippy and Kenny. Now I am ready to relax and enjoy my new
+        freedom. Please help me find a lap and my new forever home so that I can enjoy
+        my life. &nbsp;Please fill out an application to adopt me. &nbsp;To meet me,
+        please call 951-845-1513 to make an appointment.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?10056348\"
+        width=\"0\" height=\"0\" alt=\"\" \/>","descriptionText":"I am the mama for
+        Kippy and Kenny. Now I am ready to relax and enjoy my new freedom. Please
+        help me find a lap and my new forever home so that I can enjoy my life. &nbsp;Please
+        fill out an application to adopt me. &nbsp;To meet me, please call 951-845-1513
+        to make an appointment.","priority":10,"name":"Jasmine","pictureCount":1,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10056\/10056348\/35038421_100x94.jpg","qualities":[""],"rescueId":"3985","sex":"Female","sizeGroup":"Small","slug":"adopt-jasmine-dachshund-dog","isSponsorable":true,"summary":"I
+        am a two year old female dachshund\/Chihuahua mix","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10056348","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10056348","createdDate":"2016-05-29T02:52:42Z","updatedDate":"2016-10-26T22:48:33Z"}},{"type":"animals","id":"10056367","attributes":{"adoptionFeeString":"$225.00
+        includes spay and shots","ageGroup":"Young","availableDate":"2016-05-28T00:00:00Z","breedString":"Terrier
+        \/ Mixed (medium coat)","breedPrimary":"Terrier","breedPrimaryId":208,"isBreedMixed":true,"coatLength":"Medium","descriptionHtml":"I
+        am a happy 10 month boy who was given to Barc by my previous owner to find
+        a new home. &nbsp;I a very small boy who is a happy bundle of love. &nbsp;Please
+        file an application to adopt me. &nbsp;You can call the barcline at 951-845-1513
+        for more information or to make an appointment to meet me.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?10056367\"
+        width=\"0\" height=\"0\" alt=\"\" \/>","descriptionText":"I am a happy 10
+        month boy who was given to Barc by my previous owner to find a new home. &nbsp;I
+        a very small boy who is a happy bundle of love. &nbsp;Please file an application
+        to adopt me. &nbsp;You can call the barcline at 951-845-1513 for more information
+        or to make an appointment to meet me.","priority":10,"name":"Jocko","pictureCount":1,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10056\/10056367\/35038651_100x123.jpg","qualities":[""],"rescueId":"3986","sex":"Male","slug":"adopt-jocko-terrier-dog","isSponsorable":true,"summary":"I
+        am a 10 Month terrier boy","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10056367","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10056367","createdDate":"2016-05-29T03:01:42Z","updatedDate":"2016-06-22T23:53:54Z"}},{"type":"animals","id":"10056381","attributes":{"adoptionFeeString":"$250
+        includes spay and shots","ageGroup":"Baby","availableDate":"2016-05-28T00:00:00Z","breedString":"Rat
+        Terrier \/ Mixed (short coat)","breedPrimary":"Rat Terrier","breedPrimaryId":186,"isBreedMixed":true,"coatLength":"Short","descriptionHtml":"I
+        am a happy female puppy brought to Barc along with my brother Bruno to find
+        a new home. &nbsp;I am looking for a family to love and to play with me. &nbsp;I
+        need a forever home. &nbsp;To adopt me, please file an application. You can
+        call the Barcline for more information<br \/>and to make an appointment to
+        meet me.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?10056381\" width=\"0\"
+        height=\"0\" alt=\"\" \/>","descriptionText":"I am a happy female puppy brought
+        to Barc along with my brother Bruno to find a new home. &nbsp;I am looking
+        for a family to love and to play with me. &nbsp;I need a forever home. &nbsp;To
+        adopt me, please file an application. You can call the Barcline for more informationand
+        to make an appointment to meet me.","priority":10,"name":"Sassy","pictureCount":1,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10056\/10056381\/35038873_100x109.jpg","qualities":[""],"rescueId":"3987","sex":"Female","sizeGroup":"Small","slug":"adopt-sassy-rat-terrier-dog","isSponsorable":true,"summary":"I
+        am a happy 5 month female puppy","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10056381","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10056381","createdDate":"2016-05-29T03:14:59Z","updatedDate":"2016-06-08T01:49:27Z"}},{"type":"animals","id":"10056387","attributes":{"adoptionFeeString":"$250
+        includes neuter and vaccines","ageGroup":"Baby","availableDate":"2016-05-28T00:00:00Z","breedString":"Rat
+        Terrier \/ Beagle \/ Mixed (short coat)","breedPrimary":"Rat Terrier","breedPrimaryId":186,"breedSecondary":"Beagle","breedSecondaryId":90,"isBreedMixed":true,"coatLength":"Short","descriptionHtml":"I
+        am Bruno, a five month rat terrier\/beagle mix. &nbsp;I am told that I am
+        a very handsome puppy with such beautiful ears! &nbsp;In spite of the fact
+        that my owner gave my sister Sassy and me to Barc to find a new home, we are
+        both very happy puppies. I hope that I will soon find someone to love me and
+        give me a new forever home. &nbsp;Please file an application to adopt me.
+        &nbsp;You can call the Barcline at 951-845-1513 for more information and to
+        make an appointment to meet me.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?10056387\"
+        width=\"0\" height=\"0\" alt=\"\" \/>","descriptionText":"I am Bruno, a five
+        month rat terrier\/beagle mix. &nbsp;I am told that I am a very handsome puppy
+        with such beautiful ears! &nbsp;In spite of the fact that my owner gave my
+        sister Sassy and me to Barc to find a new home, we are both very happy puppies.
+        I hope that I will soon find someone to love me and give me a new forever
+        home. &nbsp;Please file an application to adopt me. &nbsp;You can call the
+        Barcline at 951-845-1513 for more information and to make an appointment to
+        meet me.","priority":10,"name":"Bruno","pictureCount":1,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10056\/10056387\/35039133_100x115.jpg","qualities":[""],"rescueId":"3988","sex":"Male","sizeGroup":"Small","slug":"adopt-bruno-rat-terrier-dog","isSponsorable":true,"summary":"I
+        am a five month male rat terrier puppy","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10056387","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10056387","createdDate":"2016-05-29T03:29:00Z","updatedDate":"2016-06-12T02:58:51Z"}},{"type":"animals","id":"10081","attributes":{"ageGroup":"Young","breedString":"Beagle
+        \/ Basset Hound \/ Mixed","breedPrimary":"Beagle","breedPrimaryId":90,"breedSecondary":"Basset
+        Hound","breedSecondaryId":89,"isBreedMixed":true,"descriptionHtml":"Lancelot
+        is a Beagle\/Basset mix with an adorable personality. He is a 1 1\/2 year
+        old that has been neutered and is current all all his shots and his flea treatments.
+        He is a scent hound mix so he does bay or bark like a hound. He needs a good
+        home with a fenced, secure yard.    ---   All these animals can be seen every
+        Saturday and every other Sunday at Petsmart in San Bernardino.   ---   We
+        adopt to homes in San Bernardino and Riverside Counties. Please feel free
+        to call and see if you are in our adoption area.----. Or you can contact Tanya
+        at 909-379-5182.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?10081\"
+        width=\"0\" height=\"0\" alt=\"\" \/>","descriptionText":"Lancelot is a Beagle\/Basset
+        mix with an adorable personality. He is a 1 1\/2 year old that has been neutered
+        and is current all all his shots and his flea treatments. He is a scent hound
+        mix so he does bay or bark like a hound. He needs a good home with a fenced,
+        secure yard.    ---   All these animals can be seen every Saturday and every
+        other Sunday at Petsmart in San Bernardino.   ---   We adopt to homes in San
+        Bernardino and Riverside Counties. Please feel free to call and see if you
+        are in our adoption area.----. Or you can contact Tanya at 909-379-5182.","priority":10,"name":"Lancelot","pictureCount":1,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10\/10081\/16010_100x111.jpg","qualities":[""],"sex":"Male","sizeGroup":"Small","slug":"adopt-lancelot-beagle-dog","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10081","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10081","createdDate":"2005-09-30T15:11:16Z","updatedDate":"2005-09-30T15:11:17Z"}},{"type":"animals","id":"10081520","attributes":{"adoptionFeeString":"$225
+        includes neuter n vaccine","ageGroup":"Baby","availableDate":"2016-06-05T00:00:00Z","breedString":"Beagle
+        \/ Mixed (short coat)","breedPrimary":"Beagle","breedPrimaryId":90,"isBreedMixed":true,"coatLength":"Short","descriptionHtml":"I
+        am a 6 month beagle puppy who was brought to Barc by my owner to find a new
+        forever home. &nbsp;I am a little shy at first until I know that I can trust
+        you. &nbsp;I love to play and I am a happy boy. &nbsp;You can learn more about
+        me by calling 951-845-1513 to make an appointment to meet me.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?10081520\"
+        width=\"0\" height=\"0\" alt=\"\" \/>","descriptionText":"I am a 6 month beagle
+        puppy who was brought to Barc by my owner to find a new forever home. &nbsp;I
+        am a little shy at first until I know that I can trust you. &nbsp;I love to
+        play and I am a happy boy. &nbsp;You can learn more about me by calling 951-845-1513
+        to make an appointment to meet me.","priority":10,"name":"Jack","pictureCount":3,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10081\/10081520\/35245480_100x169.jpg","qualities":[""],"rescueId":"3989","sex":"Male","sizeGroup":"Small","slug":"adopt-jack-beagle-dog","isSponsorable":true,"summary":"I
+        am a happy 6 month beagle puppy","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10081520","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10081520","createdDate":"2016-06-05T15:06:55Z","updatedDate":"2016-06-14T19:34:34Z"}},{"type":"animals","id":"10082","attributes":{"ageGroup":"Young","breedString":"Chihuahua
+        \/ Terrier \/ Mixed","breedPrimary":"Chihuahua","breedPrimaryId":118,"breedSecondary":"Terrier","breedSecondaryId":208,"isBreedMixed":true,"descriptionHtml":"This
+        little one was found over by Redlands East Valley School. She is roughly 1
+        year old. In the even that she is not claimed, she will be available for adoption
+        on Saturday, September 4.    ---   All these animals can be seen every Saturday
+        and every other Sunday at Petsmart in San Bernardino.   ---   We adopt to
+        homes in San Bernardino and Riverside Counties. Please feel free to call and
+        see if you are in our adoption area.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?10082\"
+        width=\"0\" height=\"0\" alt=\"\" \/>","descriptionText":"This little one
+        was found over by Redlands East Valley School. She is roughly 1 year old.
+        In the even that she is not claimed, she will be available for adoption on
+        Saturday, September 4.    ---   All these animals can be seen every Saturday
+        and every other Sunday at Petsmart in San Bernardino.   ---   We adopt to
+        homes in San Bernardino and Riverside Counties. Please feel free to call and
+        see if you are in our adoption area.","priority":10,"name":"Sweetie Pie","pictureCount":1,"pictureThumbnailUrl":"https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/105\/pictures\/animals\/10\/10082\/16011_100x170.jpg","qualities":[""],"sex":"Female","sizeGroup":"Small","slug":"adopt-sweetie-pie-chihuahua-dog","trackerimageUrl":"https:\/\/tracker.rescuegroups.org\/pet?10082","url":"https:\/\/www.barconline.com\/animals\/detail?AnimalID=10082","createdDate":"2005-09-30T15:11:17Z","updatedDate":"2005-09-30T15:11:18Z"}}]}'
+    http_version: 
+  recorded_at: Sun, 29 Dec 2019 00:12:42 GMT
+recorded_with: VCR 5.0.0

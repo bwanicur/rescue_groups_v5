@@ -1,7 +1,7 @@
 module RescueGroupsV5
   module Requests
     class Animal
-      PATH = '/animals'
+      PATH = '/animals'.freeze
 
       def initialize(api_key)
         @api_key = api_key
@@ -17,6 +17,10 @@ module RescueGroupsV5
 
       def find(id, opts = {})
         Request.new(@api_key).get("#{PATH}/#{id}", opts)
+      end
+
+      def get_breeds(opts = {})
+        Request.new(@api_key).get("#{PATH}/breeds", opts)
       end
     end
   end

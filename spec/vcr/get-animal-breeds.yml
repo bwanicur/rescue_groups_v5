@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rescuegroups.org/v5/public/animals/breeds?limit=100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - T5la0hn8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 29 Dec 2019 00:02:09 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - POST, GET, DELETE, PATCH, PUT, OPTIONS
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"count":807,"countReturned":100,"pageReturned":1,"pages":9,"limit":100,"transactionId":"zCVsuTDhnNbm","requestTime":1577577729,"responseTime":1577577729,"responseMs":12},"data":[{"type":"breeds","id":"1","attributes":{"name":"Abyssinian"},"links":{"self":"\/public\/animals\/breeds\/1"}},{"type":"breeds","id":"2","attributes":{"name":"American
+        Curl"},"links":{"self":"\/public\/animals\/breeds\/2"}},{"type":"breeds","id":"3","attributes":{"name":"American
+        Shorthair"},"links":{"self":"\/public\/animals\/breeds\/3"}},{"type":"breeds","id":"4","attributes":{"name":"American
+        Wirehair"},"links":{"self":"\/public\/animals\/breeds\/4"}},{"type":"breeds","id":"5","attributes":{"name":"Angora"},"links":{"self":"\/public\/animals\/breeds\/5"}},{"type":"breeds","id":"6","attributes":{"name":"Applehead
+        Siamese"},"links":{"self":"\/public\/animals\/breeds\/6"}},{"type":"breeds","id":"7","attributes":{"name":"Balinese"},"links":{"self":"\/public\/animals\/breeds\/7"}},{"type":"breeds","id":"8","attributes":{"name":"Bengal"},"links":{"self":"\/public\/animals\/breeds\/8"}},{"type":"breeds","id":"9","attributes":{"name":"Birman"},"links":{"self":"\/public\/animals\/breeds\/9"}},{"type":"breeds","id":"10","attributes":{"name":"Bobtail"},"links":{"self":"\/public\/animals\/breeds\/10"}},{"type":"breeds","id":"11","attributes":{"name":"Bombay"},"links":{"self":"\/public\/animals\/breeds\/11"}},{"type":"breeds","id":"12","attributes":{"name":"British
+        Shorthair"},"links":{"self":"\/public\/animals\/breeds\/12"}},{"type":"breeds","id":"13","attributes":{"name":"Burmese"},"links":{"self":"\/public\/animals\/breeds\/13"}},{"type":"breeds","id":"14","attributes":{"name":"Burmilla"},"links":{"self":"\/public\/animals\/breeds\/14"}},{"type":"breeds","id":"15","attributes":{"name":"Calico"},"links":{"self":"\/public\/animals\/breeds\/15"}},{"type":"breeds","id":"16","attributes":{"name":"Canadian
+        Hairless"},"links":{"self":"\/public\/animals\/breeds\/16"}},{"type":"breeds","id":"17","attributes":{"name":"Chausie"},"links":{"self":"\/public\/animals\/breeds\/17"}},{"type":"breeds","id":"19","attributes":{"name":"Chinchilla"},"links":{"self":"\/public\/animals\/breeds\/19"}},{"type":"breeds","id":"20","attributes":{"name":"Cornish
+        Rex"},"links":{"self":"\/public\/animals\/breeds\/20"}},{"type":"breeds","id":"21","attributes":{"name":"Cymric"},"links":{"self":"\/public\/animals\/breeds\/21"}},{"type":"breeds","id":"22","attributes":{"name":"Devon
+        Rex"},"links":{"self":"\/public\/animals\/breeds\/22"}},{"type":"breeds","id":"23","attributes":{"name":"Dilute
+        Tortoiseshell"},"links":{"self":"\/public\/animals\/breeds\/23"}},{"type":"breeds","id":"24","attributes":{"name":"Domestic
+        Long Hair"},"links":{"self":"\/public\/animals\/breeds\/24"}},{"type":"breeds","id":"29","attributes":{"name":"Domestic
+        Medium Hair"},"links":{"self":"\/public\/animals\/breeds\/29"}},{"type":"breeds","id":"35","attributes":{"name":"Domestic
+        Short Hair"},"links":{"self":"\/public\/animals\/breeds\/35"}},{"type":"breeds","id":"42","attributes":{"name":"Egyptian
+        Mau"},"links":{"self":"\/public\/animals\/breeds\/42"}},{"type":"breeds","id":"43","attributes":{"name":"Exotic
+        Shorthair"},"links":{"self":"\/public\/animals\/breeds\/43"}},{"type":"breeds","id":"44","attributes":{"name":"Havana"},"links":{"self":"\/public\/animals\/breeds\/44"}},{"type":"breeds","id":"45","attributes":{"name":"Himalayan"},"links":{"self":"\/public\/animals\/breeds\/45"}},{"type":"breeds","id":"46","attributes":{"name":"Japanese
+        Bobtail"},"links":{"self":"\/public\/animals\/breeds\/46"}},{"type":"breeds","id":"47","attributes":{"name":"Korat"},"links":{"self":"\/public\/animals\/breeds\/47"}},{"type":"breeds","id":"48","attributes":{"name":"Maine
+        Coon"},"links":{"self":"\/public\/animals\/breeds\/48"}},{"type":"breeds","id":"49","attributes":{"name":"Manx"},"links":{"self":"\/public\/animals\/breeds\/49"}},{"type":"breeds","id":"50","attributes":{"name":"Norwegian
+        Forest Cat"},"links":{"self":"\/public\/animals\/breeds\/50"}},{"type":"breeds","id":"51","attributes":{"name":"Ocicat"},"links":{"self":"\/public\/animals\/breeds\/51"}},{"type":"breeds","id":"52","attributes":{"name":"Oriental
+        Tabby"},"links":{"self":"\/public\/animals\/breeds\/52"}},{"type":"breeds","id":"53","attributes":{"name":"Persian"},"links":{"self":"\/public\/animals\/breeds\/53"}},{"type":"breeds","id":"54","attributes":{"name":"Pixie-Bob"},"links":{"self":"\/public\/animals\/breeds\/54"}},{"type":"breeds","id":"55","attributes":{"name":"Ragdoll"},"links":{"self":"\/public\/animals\/breeds\/55"}},{"type":"breeds","id":"56","attributes":{"name":"Russian
+        Blue"},"links":{"self":"\/public\/animals\/breeds\/56"}},{"type":"breeds","id":"57","attributes":{"name":"Scottish
+        Fold"},"links":{"self":"\/public\/animals\/breeds\/57"}},{"type":"breeds","id":"58","attributes":{"name":"Selkirk
+        Rex"},"links":{"self":"\/public\/animals\/breeds\/58"}},{"type":"breeds","id":"59","attributes":{"name":"Siamese"},"links":{"self":"\/public\/animals\/breeds\/59"}},{"type":"breeds","id":"60","attributes":{"name":"Snowshoe"},"links":{"self":"\/public\/animals\/breeds\/60"}},{"type":"breeds","id":"61","attributes":{"name":"Somali"},"links":{"self":"\/public\/animals\/breeds\/61"}},{"type":"breeds","id":"62","attributes":{"name":"Sphynx
+        (hairless cat)"},"links":{"self":"\/public\/animals\/breeds\/62"}},{"type":"breeds","id":"63","attributes":{"name":"Tabby"},"links":{"self":"\/public\/animals\/breeds\/63"}},{"type":"breeds","id":"68","attributes":{"name":"Tiger"},"links":{"self":"\/public\/animals\/breeds\/68"}},{"type":"breeds","id":"69","attributes":{"name":"Tonkinese"},"links":{"self":"\/public\/animals\/breeds\/69"}},{"type":"breeds","id":"70","attributes":{"name":"Torbie"},"links":{"self":"\/public\/animals\/breeds\/70"}},{"type":"breeds","id":"71","attributes":{"name":"Tortoiseshell"},"links":{"self":"\/public\/animals\/breeds\/71"}},{"type":"breeds","id":"72","attributes":{"name":"Turkish
+        Van"},"links":{"self":"\/public\/animals\/breeds\/72"}},{"type":"breeds","id":"73","attributes":{"name":"Tuxedo"},"links":{"self":"\/public\/animals\/breeds\/73"}},{"type":"breeds","id":"74","attributes":{"name":"Affenpinscher"},"links":{"self":"\/public\/animals\/breeds\/74"}},{"type":"breeds","id":"75","attributes":{"name":"Afghan
+        Hound"},"links":{"self":"\/public\/animals\/breeds\/75"}},{"type":"breeds","id":"76","attributes":{"name":"Airedale
+        Terrier"},"links":{"self":"\/public\/animals\/breeds\/76"}},{"type":"breeds","id":"77","attributes":{"name":"Akbash"},"links":{"self":"\/public\/animals\/breeds\/77"}},{"type":"breeds","id":"78","attributes":{"name":"Akita"},"links":{"self":"\/public\/animals\/breeds\/78"}},{"type":"breeds","id":"79","attributes":{"name":"Alaskan
+        Malamute"},"links":{"self":"\/public\/animals\/breeds\/79"}},{"type":"breeds","id":"80","attributes":{"name":"American
+        Bulldog"},"links":{"self":"\/public\/animals\/breeds\/80"}},{"type":"breeds","id":"81","attributes":{"name":"American
+        Eskimo Dog"},"links":{"self":"\/public\/animals\/breeds\/81"}},{"type":"breeds","id":"82","attributes":{"name":"American
+        Staffordshire Terrier"},"links":{"self":"\/public\/animals\/breeds\/82"}},{"type":"breeds","id":"83","attributes":{"name":"Anatolian
+        Shepherd"},"links":{"self":"\/public\/animals\/breeds\/83"}},{"type":"breeds","id":"84","attributes":{"name":"Australian
+        Cattle Dog\/Blue Heeler"},"links":{"self":"\/public\/animals\/breeds\/84"}},{"type":"breeds","id":"85","attributes":{"name":"Australian
+        Kelpie"},"links":{"self":"\/public\/animals\/breeds\/85"}},{"type":"breeds","id":"86","attributes":{"name":"Australian
+        Shepherd"},"links":{"self":"\/public\/animals\/breeds\/86"}},{"type":"breeds","id":"87","attributes":{"name":"Australian
+        Terrier"},"links":{"self":"\/public\/animals\/breeds\/87"}},{"type":"breeds","id":"88","attributes":{"name":"Basenji"},"links":{"self":"\/public\/animals\/breeds\/88"}},{"type":"breeds","id":"89","attributes":{"name":"Basset
+        Hound"},"links":{"self":"\/public\/animals\/breeds\/89"}},{"type":"breeds","id":"90","attributes":{"name":"Beagle"},"links":{"self":"\/public\/animals\/breeds\/90"}},{"type":"breeds","id":"91","attributes":{"name":"Bearded
+        Collie"},"links":{"self":"\/public\/animals\/breeds\/91"}},{"type":"breeds","id":"92","attributes":{"name":"Beauceron"},"links":{"self":"\/public\/animals\/breeds\/92"}},{"type":"breeds","id":"93","attributes":{"name":"Belgian
+        Shepherd Dog Sheepdog"},"links":{"self":"\/public\/animals\/breeds\/93"}},{"type":"breeds","id":"94","attributes":{"name":"Bernese
+        Mountain Dog"},"links":{"self":"\/public\/animals\/breeds\/94"}},{"type":"breeds","id":"95","attributes":{"name":"Bichon
+        Frise"},"links":{"self":"\/public\/animals\/breeds\/95"}},{"type":"breeds","id":"96","attributes":{"name":"Black
+        and Tan Coonhound"},"links":{"self":"\/public\/animals\/breeds\/96"}},{"type":"breeds","id":"97","attributes":{"name":"Black
+        Mouth Cur"},"links":{"self":"\/public\/animals\/breeds\/97"}},{"type":"breeds","id":"98","attributes":{"name":"Bloodhound"},"links":{"self":"\/public\/animals\/breeds\/98"}},{"type":"breeds","id":"99","attributes":{"name":"Border
+        Collie"},"links":{"self":"\/public\/animals\/breeds\/99"}},{"type":"breeds","id":"100","attributes":{"name":"Bordeaux"},"links":{"self":"\/public\/animals\/breeds\/100"}},{"type":"breeds","id":"101","attributes":{"name":"Borzoi"},"links":{"self":"\/public\/animals\/breeds\/101"}},{"type":"breeds","id":"102","attributes":{"name":"Boston
+        Terrier"},"links":{"self":"\/public\/animals\/breeds\/102"}},{"type":"breeds","id":"103","attributes":{"name":"Bouvier
+        des Flandres"},"links":{"self":"\/public\/animals\/breeds\/103"}},{"type":"breeds","id":"104","attributes":{"name":"Boxer"},"links":{"self":"\/public\/animals\/breeds\/104"}},{"type":"breeds","id":"105","attributes":{"name":"Briard"},"links":{"self":"\/public\/animals\/breeds\/105"}},{"type":"breeds","id":"106","attributes":{"name":"Brittany"},"links":{"self":"\/public\/animals\/breeds\/106"}},{"type":"breeds","id":"107","attributes":{"name":"Brussels
+        Griffon"},"links":{"self":"\/public\/animals\/breeds\/107"}},{"type":"breeds","id":"108","attributes":{"name":"Bull
+        Terrier"},"links":{"self":"\/public\/animals\/breeds\/108"}},{"type":"breeds","id":"109","attributes":{"name":"Bulldog"},"links":{"self":"\/public\/animals\/breeds\/109"}},{"type":"breeds","id":"110","attributes":{"name":"Bullmastiff"},"links":{"self":"\/public\/animals\/breeds\/110"}},{"type":"breeds","id":"111","attributes":{"name":"Cairn
+        Terrier"},"links":{"self":"\/public\/animals\/breeds\/111"}},{"type":"breeds","id":"112","attributes":{"name":"Cane
+        Corso Mastiff"},"links":{"self":"\/public\/animals\/breeds\/112"}},{"type":"breeds","id":"113","attributes":{"name":"Carolina
+        Dog"},"links":{"self":"\/public\/animals\/breeds\/113"}},{"type":"breeds","id":"114","attributes":{"name":"Catahoula
+        Leopard Dog"},"links":{"self":"\/public\/animals\/breeds\/114"}},{"type":"breeds","id":"115","attributes":{"name":"Cattle
+        Dog"},"links":{"self":"\/public\/animals\/breeds\/115"}},{"type":"breeds","id":"116","attributes":{"name":"Cavalier
+        King Charles Spaniel"},"links":{"self":"\/public\/animals\/breeds\/116"}},{"type":"breeds","id":"117","attributes":{"name":"Chesapeake
+        Bay Retriever"},"links":{"self":"\/public\/animals\/breeds\/117"}},{"type":"breeds","id":"118","attributes":{"name":"Chihuahua"},"links":{"self":"\/public\/animals\/breeds\/118"}},{"type":"breeds","id":"119","attributes":{"name":"Chinese
+        Crested-Hairless"},"links":{"self":"\/public\/animals\/breeds\/119"}},{"type":"breeds","id":"120","attributes":{"name":"Chinese
+        Shar-Pei"},"links":{"self":"\/public\/animals\/breeds\/120"}}],"links":{"self":"\/public\/animals\/breeds?page=1","first":"\/public\/animals\/breeds?page=1","last":"\/public\/animals\/breeds?page=9","next":"\/public\/animals\/breeds?page=2"}}'
+    http_version: 
+  recorded_at: Sun, 29 Dec 2019 00:02:09 GMT
+recorded_with: VCR 5.0.0

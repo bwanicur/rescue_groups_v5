@@ -79,7 +79,7 @@ module RescueGroupsV5
         videoCount
         videoUrlCount
         vocalLevel
-      ]
+      ].freeze
     end
   end
 end

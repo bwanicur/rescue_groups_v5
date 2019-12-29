@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rescuegroups.org/v5/public/animals/11103925?fields%5Banimals%5D=name,breedPrimary,ageGroup
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - T5la0hn8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 28 Dec 2019 17:11:47 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - POST, GET, DELETE, PATCH, PUT, OPTIONS
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Content-Length:
+      - '314'
+      Connection:
+      - close
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"count":1,"countReturned":1,"pageReturned":1,"limit":25,"pages":1,"requestTime":1577553107,"responseTime":1577553107,"responseMs":17,"transactionId":"vyrwpVJmsuJZ"},"data":[{"type":"animals","id":"11103925","attributes":{"name":"Sage","breedPrimary":"American
+        Staffordshire Terrier","ageGroup":"Adult"}}]}'
+    http_version: 
+  recorded_at: Sat, 28 Dec 2019 17:11:47 GMT
+recorded_with: VCR 5.0.0

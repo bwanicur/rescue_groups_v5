@@ -4,6 +4,6 @@ module RescueGroupsV5
       description
       id
       name
-    ]
+    ].freeze
   end
 end
