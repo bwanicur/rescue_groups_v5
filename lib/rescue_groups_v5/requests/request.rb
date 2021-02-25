@@ -36,7 +36,7 @@ module RescueGroupsV5
           req.headers["Authorization"] = @api_key
           req.params["include"] = include_str(opts[:include]) if opts[:include]
           req.params["sort"] = sort_str(opts[:sort]) if opts[:sort]
-          req.params["start"] = opts[:start] if opts[:start]
+          req.params["page"] = opts[:page] if opts[:page]
           req.params["limit"] = opts[:limit] if opts[:limit]
           if verb == :post
             body_data = { "data" => {} }

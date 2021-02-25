@@ -21,14 +21,10 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-# configure the client globally
-RescueGroupsV5::Config.set(:api_key, API_KEY_HERE)
-client = RescueGroupsV5::Client.new
-
-# or per client instance
+# basic example
 client = RescueGroupsV5::Client.new(API_KEY_HERE)
 
-options = {
+search_options = {
   fields: {
     animals: [ :name, :breedPrimary ],
     orgs: [ :name, :city ]
@@ -36,12 +32,25 @@ options = {
   postalcode: '92107',
   radius_in_miles: 15
 }
-result = client.search_animals(options)
+result = client.search_animals(search_options)
+```
+
+Nest Data:  This gem can nest the response "included" data under the parent object. If you want this feature, \
+set `nest_data` to true.  Included data will still be under the `included` section of the response, \ 
+regardless of this option.
+```ruby
+client_options = { nest_data: true }
+client = RescueGroupsV5::Client.new(API_KEY_HERE, client_options)
 ```
 
 ## Request Options
 ### Fields Option:
-A hash where each key is the name of an object and each value is an array of fields to include: `{ object: [ :collection, :of, :fields ] }`
+A hash where each key is the name of an object and each value is an array of fields to include.  Used to scope \
+down the size of the response. If not included, all fields will be returned.
+```ruby
+# psuedo-code
+{ object: [ :collection, :of, :fields ] }
+```
 
 ### Supported Objects:
 - animals
@@ -85,31 +94,16 @@ options[:sort] = [
 ]
 ```
 
-### Start:
-The record index.  Integer value.  Defaults to 0.
+### Page:
+For paginating requests.  Integer value.  Defaults to 1.
 ```ruby
-options[:start] = {
-  start: 50
-}
+options = { page: 2 }
 ```
 
 ### Limit:
 Simple integer limit (Rescue Groups API enforces a max limit of 250).  Defaults to 25.
 ```ruby
-options[:limit] = {
-  limit: 50
-}
-```
-
-### Other Options:
-
-- Nest Data:  This gem can nest included data under the parent object. \
-If you want this feature, set `nest_data` to true.  Included data will still \
-be under the `included` section of the response, regardless of this option.
-```ruby
-{
-  nest_data: false # Defaults to false
-}
+options = { limit: 50 }
 ```
 
 ### Location Filtering:
