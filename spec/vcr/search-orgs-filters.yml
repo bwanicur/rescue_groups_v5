@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rescuegroups.org/v5/public/orgs/search?fields%5Borgs%5D=name,type&limit=10
+    body:
+      encoding: UTF-8
+      string: '{"data":{"filters":[{"fieldName":"orgs.type","operation":"equal","criteria":"Shelter"}]}}'
+    headers:
+      User-Agent:
+      - Faraday v2.15.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - "<RESCUE_GROUPS_V5_API_KEY>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Nov 2026 22:16:05 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Transaction-Id:
+      - TPlPJPXBmmKP
+      Content-Length:
+      - '1091'
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"count":958,"countReturned":10,"pageReturned":1,"limit":10,"pages":96,"transactionId":"TPlPJPXBmmKP"},"data":[{"type":"orgs","id":"13","attributes":{"name":"Prince
+        Georges Feral Friends, SPCA, Inc.","type":"Shelter"}},{"type":"orgs","id":"65","attributes":{"name":"Hampshire
+        County Animal Control","type":"Shelter"}},{"type":"orgs","id":"81","attributes":{"name":"Animal
+        Advocates of Howard County","type":"Shelter"}},{"type":"orgs","id":"91","attributes":{"name":"Posey
+        Humane Society","type":"Shelter"}},{"type":"orgs","id":"98","attributes":{"name":"Independent
+        Cat Society","type":"Shelter"}},{"type":"orgs","id":"118","attributes":{"name":"Mid
+        Hudson Animal Aid","type":"Shelter"}},{"type":"orgs","id":"121","attributes":{"name":"Dane
+        County Friends of Ferals","type":"Shelter"}},{"type":"orgs","id":"198","attributes":{"name":"Pets
+        Looking4 Mates Humane Society","type":"Shelter"}},{"type":"orgs","id":"202","attributes":{"name":"Wendy''s
+        Feline Friends","type":"Shelter"}},{"type":"orgs","id":"206","attributes":{"name":"Big
+        Lick Ferret Shelter & Hospice","type":"Shelter"}}]}'
+  recorded_at: Tue, 17 Nov 2026 22:16:05 GMT
+recorded_with: VCR 6.4.1

@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rescuegroups.org/v5/public/animals/search/available/dogs?fields%5Banimals%5D=name&fields%5Bspecies%5D=singular&include=species&limit=10
+    body:
+      encoding: UTF-8
+      string: '{"data":{}}'
+    headers:
+      User-Agent:
+      - Faraday v2.15.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - "<RESCUE_GROUPS_V5_API_KEY>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Nov 2026 22:16:01 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Transaction-Id:
+      - unZscBMhmENM
+      Content-Length:
+      - '1595'
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"count":30994,"countReturned":10,"pageReturned":1,"limit":10,"pages":3100,"transactionId":"unZscBMhmENM"},"data":[{"type":"animals","id":"10131543","attributes":{"name":"Doli"},"relationships":{"species":{"data":[{"type":"species","id":"8"}]}}},{"type":"animals","id":"10138270","attributes":{"name":"Cylana"},"relationships":{"species":{"data":[{"type":"species","id":"8"}]}}},{"type":"animals","id":"10140777","attributes":{"name":"Root
+        Beer"},"relationships":{"species":{"data":[{"type":"species","id":"8"}]}}},{"type":"animals","id":"10140779","attributes":{"name":"Gunnie"},"relationships":{"species":{"data":[{"type":"species","id":"8"}]}}},{"type":"animals","id":"10146639","attributes":{"name":"Kirby"},"relationships":{"species":{"data":[{"type":"species","id":"8"}]}}},{"type":"animals","id":"10257159","attributes":{"name":"Jax"},"relationships":{"species":{"data":[{"type":"species","id":"8"}]}}},{"type":"animals","id":"10481659","attributes":{"name":"Sponsor
+        Joe Sanctuary 2016"},"relationships":{"species":{"data":[{"type":"species","id":"8"}]}}},{"type":"animals","id":"10501644","attributes":{"name":"Pre-Approval"},"relationships":{"species":{"data":[{"type":"species","id":"8"}]}}},{"type":"animals","id":"10546904","attributes":{"name":"Bug"},"relationships":{"species":{"data":[{"type":"species","id":"8"}]}}},{"type":"animals","id":"10552500","attributes":{"name":"Bella"},"relationships":{"species":{"data":[{"type":"species","id":"8"}]}}}],"included":[{"type":"species","id":"8","attributes":{"singular":"Dog"},"links":{"self":"\/public\/animals\/species\/8"}}]}'
+  recorded_at: Tue, 17 Nov 2026 22:16:01 GMT
+recorded_with: VCR 6.4.1

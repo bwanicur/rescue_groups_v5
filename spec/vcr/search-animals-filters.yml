@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rescuegroups.org/v5/public/animals/search/available?fields%5Banimals%5D=breedPrimary,sizeGroup&include=&limit=25
+    body:
+      encoding: UTF-8
+      string: '{"data":{"filters":[{"fieldName":"animals.breedPrimary","operation":"contains","criteria":"Labrador"},{"fieldName":"animals.sizeGroup","operation":"equal","criteria":["Medium","Large"]}]}}'
+    headers:
+      User-Agent:
+      - Faraday v2.15.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - "<RESCUE_GROUPS_V5_API_KEY>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Nov 2026 22:16:02 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Transaction-Id:
+      - obayaZMGBJuy
+      Content-Length:
+      - '2786'
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"count":2928,"countReturned":25,"pageReturned":1,"limit":25,"pages":118,"transactionId":"obayaZMGBJuy"},"data":[{"type":"animals","id":"10140777","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Large"}},{"type":"animals","id":"10140779","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Large"}},{"type":"animals","id":"10778312","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Medium"}},{"type":"animals","id":"11752127","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Medium"}},{"type":"animals","id":"11843972","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Medium"}},{"type":"animals","id":"11907251","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Large"}},{"type":"animals","id":"11965666","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Medium"}},{"type":"animals","id":"11965910","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Medium"}},{"type":"animals","id":"11966161","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Medium"}},{"type":"animals","id":"11966174","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Large"}},{"type":"animals","id":"11966210","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Medium"}},{"type":"animals","id":"12033288","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Medium"}},{"type":"animals","id":"12033290","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Medium"}},{"type":"animals","id":"12048687","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Large"}},{"type":"animals","id":"12078745","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Medium"}},{"type":"animals","id":"12202359","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Large"}},{"type":"animals","id":"12337857","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Large"}},{"type":"animals","id":"12372707","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Large"}},{"type":"animals","id":"12726786","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Medium"}},{"type":"animals","id":"12726789","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Medium"}},{"type":"animals","id":"12765209","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Medium"}},{"type":"animals","id":"12783512","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Large"}},{"type":"animals","id":"13712550","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Medium"}},{"type":"animals","id":"13719972","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Large"}},{"type":"animals","id":"14067224","attributes":{"breedPrimary":"Labrador
+        Retriever","sizeGroup":"Large"}}]}'
+  recorded_at: Tue, 17 Nov 2026 22:16:02 GMT
+recorded_with: VCR 6.4.1

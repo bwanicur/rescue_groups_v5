@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rescuegroups.org/v5/public/animals/search/available?limit=0
+    body:
+      encoding: UTF-8
+      string: '{"data":{}}'
+    headers:
+      User-Agent:
+      - Faraday v2.15.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - "<RESCUE_GROUPS_V5_API_KEY>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Nov 2026 22:16:00 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Transaction-Id:
+      - LyGhiyUzCLec
+      Content-Length:
+      - '110'
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"count":62473,"countReturned":0,"pageReturned":1,"limit":0,"pages":0,"transactionId":"LyGhiyUzCLec"}}'
+  recorded_at: Tue, 17 Nov 2026 22:16:00 GMT
+recorded_with: VCR 6.4.1

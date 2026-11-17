@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rescuegroups.org/v5/public/animals/search/available?fields%5Banimals%5D=name,distance&include=&limit=25
+    body:
+      encoding: UTF-8
+      string: '{"data":{"filterRadius":{"postalcode":"92107","miles":25}}}'
+    headers:
+      User-Agent:
+      - Faraday v2.15.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - "<RESCUE_GROUPS_V5_API_KEY>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Nov 2026 22:16:01 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Transaction-Id:
+      - lJHcyCBgsbpD
+      Content-Length:
+      - '2173'
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"count":1034,"countReturned":25,"pageReturned":1,"limit":25,"pages":42,"transactionId":"lJHcyCBgsbpD"},"data":[{"type":"animals","id":"10957627","attributes":{"distance":3.87,"name":"Helga"}},{"type":"animals","id":"11672206","attributes":{"distance":5.07,"name":"Knox"}},{"type":"animals","id":"13234070","attributes":{"distance":3.87,"name":"Lilyroo"}},{"type":"animals","id":"13235590","attributes":{"distance":3.17,"name":"A1841900"}},{"type":"animals","id":"13353590","attributes":{"distance":6.86,"name":"Daisey"}},{"type":"animals","id":"13778228","attributes":{"distance":6.86,"name":"Kristi"}},{"type":"animals","id":"13778236","attributes":{"distance":6.86,"name":"Berta"}},{"type":"animals","id":"13778263","attributes":{"distance":6.86,"name":"Rocky"}},{"type":"animals","id":"13798631","attributes":{"distance":6.86,"name":"Helen"}},{"type":"animals","id":"14159020","attributes":{"distance":6.86,"name":"Hercules"}},{"type":"animals","id":"14234438","attributes":{"distance":6.31,"name":"Papaya"}},{"type":"animals","id":"15748910","attributes":{"distance":3.87,"name":"Auggie"}},{"type":"animals","id":"15921437","attributes":{"distance":3.87,"name":"Jillie"}},{"type":"animals","id":"16445356","attributes":{"distance":5.07,"name":"Beatrice"}},{"type":"animals","id":"16875191","attributes":{"distance":20.19,"name":"Blanche"}},{"type":"animals","id":"16902221","attributes":{"distance":6.31,"name":"Brinkmann"}},{"type":"animals","id":"16902236","attributes":{"distance":6.31,"name":"Pfeifer"}},{"type":"animals","id":"17062300","attributes":{"distance":5.07,"name":"Ginger"}},{"type":"animals","id":"17372513","attributes":{"distance":3.87,"name":"Herman"}},{"type":"animals","id":"17574441","attributes":{"distance":6.09,"name":"Twinkle"}},{"type":"animals","id":"17613383","attributes":{"distance":13.38,"name":"Erin"}},{"type":"animals","id":"17800031","attributes":{"distance":6.09,"name":"Drako"}},{"type":"animals","id":"17852948","attributes":{"distance":13.38,"name":"Gerald"}},{"type":"animals","id":"17998681","attributes":{"distance":5.07,"name":"Isla"}},{"type":"animals","id":"18105893","attributes":{"distance":6.86,"name":"Leo"}}]}'
+  recorded_at: Tue, 17 Nov 2026 22:16:01 GMT
+recorded_with: VCR 6.4.1

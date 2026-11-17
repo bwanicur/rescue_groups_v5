@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rescuegroups.org/v5/public/orgs/16/animals/search/available?fields%5Banimals%5D=name&fields%5Bstatuses%5D=name&include=orgs,statuses&limit=10
+    body:
+      encoding: UTF-8
+      string: '{"data":{}}'
+    headers:
+      User-Agent:
+      - Faraday v2.15.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - "<RESCUE_GROUPS_V5_API_KEY>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Nov 2026 22:16:06 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Transaction-Id:
+      - zhmvtKwYxdmG
+      Content-Length:
+      - '2548'
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"count":20,"countReturned":10,"pageReturned":1,"limit":10,"pages":2,"transactionId":"zhmvtKwYxdmG"},"data":[{"type":"animals","id":"18502949","attributes":{"name":"Kobe"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"16"}]},"statuses":{"data":[{"type":"statuses","id":"1"}]}}},{"type":"animals","id":"20332003","attributes":{"name":"Willow"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"16"}]},"statuses":{"data":[{"type":"statuses","id":"1"}]}}},{"type":"animals","id":"20833463","attributes":{"name":"Jaxx"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"16"}]},"statuses":{"data":[{"type":"statuses","id":"1"}]}}},{"type":"animals","id":"21229293","attributes":{"name":"Porky
+        Pig"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"16"}]},"statuses":{"data":[{"type":"statuses","id":"1"}]}}},{"type":"animals","id":"21566542","attributes":{"name":"Mica"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"16"}]},"statuses":{"data":[{"type":"statuses","id":"1"}]}}},{"type":"animals","id":"22545396","attributes":{"name":"Sadie"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"16"}]},"statuses":{"data":[{"type":"statuses","id":"1"}]}}},{"type":"animals","id":"22545443","attributes":{"name":"Socks"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"16"}]},"statuses":{"data":[{"type":"statuses","id":"1"}]}}},{"type":"animals","id":"22545462","attributes":{"name":"Dior"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"16"}]},"statuses":{"data":[{"type":"statuses","id":"1"}]}}},{"type":"animals","id":"22545464","attributes":{"name":"Patches"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"16"}]},"statuses":{"data":[{"type":"statuses","id":"1"}]}}},{"type":"animals","id":"22545475","attributes":{"name":"Pumpkin"},"relationships":{"orgs":{"data":[{"type":"orgs","id":"16"}]},"statuses":{"data":[{"type":"statuses","id":"1"}]}}}],"included":[{"type":"orgs","id":"16","attributes":{"name":"Animal
+        Relief Fund","street":"21800 N Shangri La Drive, Unit 16","city":"Lexington
+        Park","state":"MD","postalcode":"20653","country":"United States","phone":"(301)
+        866-0303","email":"info@animalrelieffund.org","url":"https:\/\/www.animalrelieffund.org\/","facebookUrl":"https:\/\/www.facebook.com\/Animal-Relief-Fund-ARF-272309059493160","type":"Rescue","lat":38.24150085449219,"lon":-76.43049621582031,"coordinates":"38.2415,
+        -76.4305","citystate":"Lexington Park, MD"}},{"type":"statuses","id":"1","attributes":{"name":"Available"},"links":{"self":"\/public\/animals\/statuses\/1"}}]}'
+  recorded_at: Tue, 17 Nov 2026 22:16:06 GMT
+recorded_with: VCR 6.4.1

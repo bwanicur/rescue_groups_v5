@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rescuegroups.org/v5/public/animals/search/available?fields%5Banimals%5D=distance&include=&limit=25
+    body:
+      encoding: UTF-8
+      string: '{"data":{"filterRadius":{"lat":32.7174,"lon":-117.1628,"kilometers":15}}}'
+    headers:
+      User-Agent:
+      - Faraday v2.15.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - "<RESCUE_GROUPS_V5_API_KEY>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Nov 2026 22:16:02 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Transaction-Id:
+      - uAZYRQNxLTJn
+      Content-Length:
+      - '1771'
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"count":501,"countReturned":25,"pageReturned":1,"limit":25,"pages":21,"transactionId":"uAZYRQNxLTJn"},"data":[{"type":"animals","id":"10957627","attributes":{"distance":10.52}},{"type":"animals","id":"11672206","attributes":{"distance":0.59}},{"type":"animals","id":"13234070","attributes":{"distance":10.52}},{"type":"animals","id":"13235590","attributes":{"distance":6.89}},{"type":"animals","id":"13353590","attributes":{"distance":6.3}},{"type":"animals","id":"13778228","attributes":{"distance":6.3}},{"type":"animals","id":"13778236","attributes":{"distance":6.3}},{"type":"animals","id":"13778263","attributes":{"distance":6.3}},{"type":"animals","id":"13798631","attributes":{"distance":6.3}},{"type":"animals","id":"14159020","attributes":{"distance":6.3}},{"type":"animals","id":"14234438","attributes":{"distance":11.76}},{"type":"animals","id":"15748910","attributes":{"distance":10.52}},{"type":"animals","id":"15921437","attributes":{"distance":10.52}},{"type":"animals","id":"16445356","attributes":{"distance":0.59}},{"type":"animals","id":"16902221","attributes":{"distance":11.76}},{"type":"animals","id":"16902236","attributes":{"distance":11.76}},{"type":"animals","id":"17062300","attributes":{"distance":0.59}},{"type":"animals","id":"17372513","attributes":{"distance":10.52}},{"type":"animals","id":"17574441","attributes":{"distance":6.46}},{"type":"animals","id":"17800031","attributes":{"distance":6.46}},{"type":"animals","id":"17998681","attributes":{"distance":0.59}},{"type":"animals","id":"18105893","attributes":{"distance":6.3}},{"type":"animals","id":"18255138","attributes":{"distance":6.46}},{"type":"animals","id":"18320276","attributes":{"distance":0.59}},{"type":"animals","id":"18969163","attributes":{"distance":6.46}}]}'
+  recorded_at: Tue, 17 Nov 2026 22:16:02 GMT
+recorded_with: VCR 6.4.1

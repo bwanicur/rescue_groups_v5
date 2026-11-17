@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rescuegroups.org/v5/public/orgs/search?fields%5Borgs%5D=name,city,distance&limit=5
+    body:
+      encoding: UTF-8
+      string: '{"data":{"filterRadius":{"postalcode":"92107","miles":50}}}'
+    headers:
+      User-Agent:
+      - Faraday v2.15.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - "<RESCUE_GROUPS_V5_API_KEY>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Nov 2026 22:16:05 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Transaction-Id:
+      - QGejfXtKYzEl
+      Content-Length:
+      - '746'
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"count":55,"countReturned":5,"pageReturned":1,"limit":5,"pages":11,"transactionId":"QGejfXtKYzEl"},"data":[{"type":"orgs","id":"1034","attributes":{"distance":5.07,"name":"It''s
+        The Pits","city":"San Diego"}},{"type":"orgs","id":"1406","attributes":{"distance":45.66,"name":"Dogz
+        In Need","city":"Fallbrook"}},{"type":"orgs","id":"1953","attributes":{"distance":48.44,"name":"Coastal
+        Animal Services Authority","city":"San Clemente"}},{"type":"orgs","id":"2018","attributes":{"distance":3.17,"name":"San
+        Diego County Department of Animal Services - Central Shelter","city":"San
+        Diego"}},{"type":"orgs","id":"2019","attributes":{"distance":24.92,"name":"San
+        Diego County Department of Animal Services - North Shelter","city":"Carlsbad"}}]}'
+  recorded_at: Tue, 17 Nov 2026 22:16:05 GMT
+recorded_with: VCR 6.4.1

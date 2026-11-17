@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rescuegroups.org/v5/public/orgs/search/rescue?fields%5Borgs%5D=name,type&limit=10
+    body:
+      encoding: UTF-8
+      string: '{"data":{}}'
+    headers:
+      User-Agent:
+      - Faraday v2.15.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - "<RESCUE_GROUPS_V5_API_KEY>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Nov 2026 22:16:05 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Transaction-Id:
+      - tMWsZCIsCyid
+      Content-Length:
+      - '1167'
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"count":3231,"countReturned":10,"pageReturned":1,"limit":10,"pages":324,"transactionId":"tMWsZCIsCyid"},"data":[{"type":"orgs","id":"12","attributes":{"name":"Cat
+        Rescue of Maryland, Inc.","type":"Rescue"}},{"type":"orgs","id":"16","attributes":{"name":"Animal
+        Relief Fund","type":"Rescue"}},{"type":"orgs","id":"22","attributes":{"name":"LNF
+        Dog Rescue Adoption Center","type":"Rescue"}},{"type":"orgs","id":"23","attributes":{"name":"The
+        Feline Foundation of Greater Washington, Inc.","type":"Rescue"}},{"type":"orgs","id":"24","attributes":{"name":"Lost
+        Fantasy Rescue","type":"Rescue"}},{"type":"orgs","id":"27","attributes":{"name":"Olive
+        Branch Animal Rescue & Refuge, Inc.","type":"Rescue"}},{"type":"orgs","id":"30","attributes":{"name":"Castaway
+        Critters, the James A. Hueholt Memorial Foundation","type":"Rescue"}},{"type":"orgs","id":"35","attributes":{"name":"Delaware
+        Puppy Rescue","type":"Rescue"}},{"type":"orgs","id":"41","attributes":{"name":"Whimsical
+        Animal Rescue, Inc.  of Sussex County Animal Association","type":"Rescue"}},{"type":"orgs","id":"43","attributes":{"name":"Paws
+        and Whiskers Animal Rescue Organization","type":"Rescue"}}]}'
+  recorded_at: Tue, 17 Nov 2026 22:16:05 GMT
+recorded_with: VCR 6.4.1

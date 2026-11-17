@@ -176,6 +176,12 @@ An array of related objects to return in the `included` section.
 client.search_animals(include: [:orgs, :breeds, :pictures])
 ```
 
+When `include` is omitted, the API returns its default set of related objects (pictures, breeds, colors, locations, orgs and more), which can make responses large. Pass an empty array to return no related objects:
+
+```ruby
+client.search_animals(include: [])
+```
+
 ### Sort
 
 An array of hashes with these keys:

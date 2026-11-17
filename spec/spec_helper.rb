@@ -2,7 +2,9 @@
 
 require "bundler/setup"
 require "byebug"
+require "json"
 require "vcr"
+require "webmock/rspec"
 require "rescue_groups_v5"
 
 RSpec.configure do |config|
@@ -20,4 +22,7 @@ end
 VCR.configure do |c|
   c.cassette_library_dir = "spec/vcr"
   c.hook_into :webmock
+  # Search filters and radius are sent in the POST body, so match on it too.
+  c.default_cassette_options = { match_requests_on: %i[method uri body] }
+  c.filter_sensitive_data("<RESCUE_GROUPS_V5_API_KEY>") { ENV["RESCUE_GROUPS_V5_API_KEY"] }
 end

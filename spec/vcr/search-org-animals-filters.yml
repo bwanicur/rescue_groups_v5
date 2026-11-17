@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.rescuegroups.org/v5/public/orgs/16/animals/search?fields%5Banimals%5D=name,ageGroup&include=&limit=10
+    body:
+      encoding: UTF-8
+      string: '{"data":{"filters":[{"fieldName":"animals.ageGroup","operation":"equal","criteria":"Adult"}]}}'
+    headers:
+      User-Agent:
+      - Faraday v2.15.1
+      Content-Type:
+      - application/vnd.api+json
+      Authorization:
+      - "<RESCUE_GROUPS_V5_API_KEY>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Nov 2026 22:16:06 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, Content-Type, Accept
+      Access-Control-Expose-Headers:
+      - Authorization, Location
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Transaction-Id:
+      - BQRfABdAgXVG
+      Content-Length:
+      - '927'
+      Content-Type:
+      - application/vnd.api+json
+      Strict-Transport-Security:
+      - max-age=15768000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"meta":{"count":383,"countReturned":10,"pageReturned":1,"limit":10,"pages":39,"transactionId":"BQRfABdAgXVG"},"data":[{"type":"animals","id":"1009","attributes":{"name":"Sparky","ageGroup":"Adult"}},{"type":"animals","id":"1010","attributes":{"name":"Cinny","ageGroup":"Adult"}},{"type":"animals","id":"1011","attributes":{"name":"Gomer","ageGroup":"Adult"}},{"type":"animals","id":"1012","attributes":{"name":"Linda","ageGroup":"Adult"}},{"type":"animals","id":"1013","attributes":{"name":"Basil","ageGroup":"Adult"}},{"type":"animals","id":"1014","attributes":{"name":"Sage","ageGroup":"Adult"}},{"type":"animals","id":"1015","attributes":{"name":"Oregano","ageGroup":"Adult"}},{"type":"animals","id":"1016","attributes":{"name":"Caper","ageGroup":"Adult"}},{"type":"animals","id":"1017","attributes":{"name":"Pepper","ageGroup":"Adult"}},{"type":"animals","id":"1018","attributes":{"name":"ButterCup","ageGroup":"Adult"}}]}'
+  recorded_at: Tue, 17 Nov 2026 22:16:06 GMT
+recorded_with: VCR 6.4.1
