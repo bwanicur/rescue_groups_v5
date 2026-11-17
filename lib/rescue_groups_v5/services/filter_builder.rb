@@ -4,7 +4,7 @@ module RescueGroupsV5
   module Services
     class FilterBuilder
       OPERATIONS = {
-        equals:                "equals",
+        equals:                "equal",
         not_equal:             "notequal",
         less_than:             "lessthan",
         less_than_or_equal:    "lessthanorequal",
@@ -18,7 +18,7 @@ module RescueGroupsV5
 
       def self.run(filters_data)
         filters_data.map do |hash|
-          operation = hash[:operation] || OPERATIONS[:equals]
+          operation = hash[:operation] || :equals
           {
             fieldName: "#{hash[:object]}.#{hash[:field_name]}",
             operation: translate_operation(operation),

@@ -38,7 +38,7 @@ module RescueGroupsV5
     private
 
     def process_response(response)
-      Response.new(response.body, @global_opts[:nest_data]).run
+      Requests::Response.new(response.body, @global_opts[:nest_data]).run
     end
 
     def animal_request

@@ -1,18 +1,17 @@
 # frozen_string_literal: true
 
 require "faraday"
-# frozen_string_literal: true
-
 require_relative "./response"
 require_relative "../services/filter_builder"
 require_relative "../services/sort_builder"
 require_relative "../services/fields_builder"
+require_relative "../services/radius_filter_builder"
+require_relative "../services/search_path_builder"
 
 module RescueGroupsV5
   module Requests
     class Request
       URL = "https://api.rescuegroups.org/v5/public"
-      DEFAULT_RADIUS = 10
 
       def initialize(api_key)
         @api_key = api_key
@@ -41,7 +40,7 @@ module RescueGroupsV5
           if verb == :post
             body_data = { "data" => {} }
             body_data["data"]["filters"] = filters_data(opts[:filters]) if opts[:filters]
-            body_data["data"]["filterRadius"] = filter_radius_data(opts) if opts[:postalcode]
+            body_data["data"]["filterRadius"] = filter_radius_data(opts) if radius_data?(opts)
             req.body = body_data.to_json
           end
         end
@@ -59,12 +58,12 @@ module RescueGroupsV5
         Services::FieldsBuilder.run(fields_data)
       end
 
-      # TODO: update to include coordinates or lat and lon - upgrade to service ?
       def filter_radius_data(data = {})
-        {
-          postalcode: data[:postalcode],
-          miles: data[:radius_in_miles] || DEFAULT_RADIUS
-        }
+        Services::RadiusFilterBuilder.run(data)
+      end
+
+      def radius_data?(opts)
+        opts[:postalcode] || (opts[:lat] && opts[:lon])
       end
 
       def filters_data(filter_data = {})

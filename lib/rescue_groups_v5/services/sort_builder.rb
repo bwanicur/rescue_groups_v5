@@ -7,7 +7,7 @@ module RescueGroupsV5
         sort_strings = []
         sort_data.each do |hash|
           dir = hash[:direction] == :descending ? "-" : ""
-          sort_strings << "#{hash[:object]}.#{hash[:sort_value]}#{dir}"
+          sort_strings << "#{dir}#{hash[:object]}.#{hash[:sort_value]}"
         end
         sort_strings.join(",")
       end

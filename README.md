@@ -1,6 +1,8 @@
 # RescueGroupsV5
 
-This is the wrapper for the new <a target="_blank" href="https://api.rescuegroups.org/v5/public/docs">Rescue Groups API V5</a>
+A Ruby wrapper for the <a target="_blank" href="https://api.rescuegroups.org/v5/public/docs">RescueGroups.org API v5</a> (public endpoints).
+
+**Note:** the v5 public API is primarily read-only for now. It does not support creating, updating, or deleting animals or organizations, so this gem only provides methods for searching and reading data.
 
 ## Installation
 
@@ -21,129 +23,192 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-# basic example
 client = RescueGroupsV5::Client.new(API_KEY_HERE)
 
-search_options = {
+result = client.search_animals(
+  views: [:available, :dogs],
+  postalcode: "92107",
+  miles: 25,
   fields: {
-    animals: [ :name, :breedPrimary ],
-    orgs: [ :name, :city ]
+    animals: [:name, :breedPrimary, :distance],
+    orgs: [:name, :city]
   },
-  postalcode: '92107',
-  radius_in_miles: 15
-}
-result = client.search_animals(search_options)
+  include: [:orgs],
+  sort: [{ object: :animals, sort_value: :distance, direction: :ascending }],
+  limit: 10
+)
+
+result["meta"]["count"] # total matching animals
+result["data"]          # array of animals
+result["included"]      # related objects requested with `include`
 ```
 
-Nest Data:  This gem can nest the response "included" data under the parent object. If you want this feature, \
-set `nest_data` to true.  Included data will still be under the `included` section of the response, \ 
-regardless of this option.
+Every method returns the parsed JSON response as a Hash with `meta`, `data` and (when requested) `included` keys. API errors are not raised; they are returned under an `errors` key:
+
 ```ruby
-client_options = { nest_data: true }
-client = RescueGroupsV5::Client.new(API_KEY_HERE, client_options)
+result["errors"] # => [{ "status" => 400, "title" => "Invalid Sort", "detail" => "..." }]
+```
+
+### Client Methods
+
+| Method | API endpoint |
+|---|---|
+| `search_animals(opts)` | `POST /public/animals/search/{views}` |
+| `get_animal(id, opts)` | `GET /public/animals/{id}` |
+| `get_animal_breeds(opts)` | `GET /public/animals/breeds` |
+| `search_orgs(opts)` | `POST /public/orgs/search/{views}` |
+| `get_org(id, opts)` | `GET /public/orgs/{id}` |
+| `get_org_animals(org_id, opts)` | `GET /public/orgs/{id}/animals` |
+| `search_org_animals(org_id, opts)` | `POST /public/orgs/{id}/animals/search/{views}` |
+
+### Nesting Included Data
+
+The client can copy each `included` object's attributes into the matching entry under the parent's `relationships`. Set `nest_data` to true to enable this. The `included` section is still returned either way.
+
+```ruby
+client = RescueGroupsV5::Client.new(API_KEY_HERE, nest_data: true)
+
+animal = client.search_animals(include: [:orgs])["data"].first
+animal["relationships"]["orgs"]["data"].first["name"] # => "Second Chance Dog Rescue"
 ```
 
 ## Request Options
-### Fields Option:
-A hash where each key is the name of an object and each value is an array of fields to include.  Used to scope \
-down the size of the response. If not included, all fields will be returned.
+
+### Views
+
+_Search methods only._
+
+Views are predefined searches from the API, passed as an array of names. Multiple views are combined (AND).
+
 ```ruby
-# psuedo-code
-{ object: [ :collection, :of, :fields ] }
+client.search_animals(views: [:available, :cats, :isspecialneeds])
 ```
 
-### Supported Objects:
-- animals
-- orgs
+Animal searches (`search_animals` and `search_org_animals`) default to `[:available]`. To search all animals, including adopted ones, pass an empty array:
 
-### Available Fields:
+```ruby
+client.search_animals                # available animals only
+client.search_animals(views: [])     # every animal, any status
+```
+
+Org searches have no default view.
+
+An unknown view raises `RescueGroupsV5::InvalidViewError` (an `ArgumentError`) before any request is sent.
+
+**Animal views:** `available`, `adopted`, `isspecialneeds`, `isneedingfoster`, `urgent`, `iscourtesylisting`, and one view per species: `alpacas`, `birds`, `cats`, `chickens`, `chinchillas`, `cows`, `degus`, `dogs`, `donkeys`, `ducks`, `ferrets`, `fish`, `frogs`, `geckos`, `geese`, `gerbils`, `goats`, `groundhogs`, `hamsters`, `hedgehogs`, `horses`, `iguanas`, `lizards`, `llama`, `mice`, `otters`, `pigs`, `ponies`, `rabbits`, `rats`, `sheep`, `skunks`, `snakes`, `tarantulas`, `tortoises`, `turkeys`, `turtles`
+
+Some documented animal views are broken in the API and are not supported. Use a filter instead:
+
+```ruby
+# haspic (has no effect in the API)
+{ object: :animals, field_name: :pictureCount, operation: :greater_than_or_equal, criteria: 1 }
+
+# guineapigs, hermitcrabs, prairiedogs, sugargliders (always return no results)
+{ object: :species, field_name: :plural, criteria: "Guinea Pigs" } # or "Hermit Crabs", "Prairie Dogs", "Sugar Gliders"
+```
+
+The API treats a criteria of `0` as blank, so use `operation: :greater_than_or_equal, criteria: 1` rather than `operation: :greater_than, criteria: 0`.
+
+**Org views:** `rescue`. The API's documented `shelter` view is broken (it always returns no results), so use a filter instead:
+
+```ruby
+client.search_orgs(filters: [{ object: :orgs, field_name: :type, criteria: "Shelter" }])
+```
+
+### Location
+
+_Search methods only._
+
+Search within a radius of a postal code (US and Canada) or a lat/lon point. The distance is `miles` or `kilometers` and defaults to 10 miles. Results include a `distance` attribute.
+
+```ruby
+client.search_animals(postalcode: "92107", miles: 25)
+client.search_animals(lat: 32.7174, lon: -117.1628, kilometers: 10)
+```
+
+### Filters
+
+_Search methods only._
+
+An array of hashes with these keys:
+
+- `object`: `:animals` or `:orgs`
+- `field_name`: the object's field
+- `operation`: defaults to `:equals`. One of `:equals`, `:not_equal`, `:less_than`, `:less_than_or_equal`, `:greater_than`, `:greater_than_or_equal`, `:contains`, `:not_contain`, `:blank`, `:not_blank`
+- `criteria`: the value to compare against. An array with `:equals` matches any of the values.
+
+Multiple filters are combined (AND).
+
+```ruby
+client.search_animals(filters: [
+  { object: :animals, field_name: :breedPrimary, operation: :contains, criteria: "Staffordshire" },
+  { object: :animals, field_name: :sizeGroup, criteria: ["Small", "Medium"] },
+  { object: :animals, field_name: :birthDate, operation: :greater_than, criteria: "2020-01-01T00:00:00Z" }
+])
+```
+
+Date criteria must be full ISO 8601 timestamps (`"2020-01-01T00:00:00Z"`). A bare date like `"2020-01-01"` makes the API return a 500 error.
+
+### Fields
+
+A hash where each key is an object name and each value is an array of fields to return. Use it to reduce the size of the response. All fields are returned when it is omitted.
+
+```ruby
+client.search_animals(fields: {
+  animals: [:name, :ageGroup, :breedPrimary],
+  orgs: [:name, :city]
+})
+```
+
+Available fields:
 - [Animals](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/animal.rb)
 - [Breeds](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/breed.rb)
-- [Organizations](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/organization.rb)
+- [Colors](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/color.rb)
 - [Contacts](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/contact.rb)
+- [Orgs](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/org.rb)
 - [Statuses](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/fields/status.rb)
 
-Example:
+### Include
+
+An array of related objects to return in the `included` section.
+
 ```ruby
-options[:fields] = {
-  animals: [ :name, :ageGroup, :breedPrimary ],
-  orgs: [ :name, :city ]
-}
+client.search_animals(include: [:orgs, :breeds, :pictures])
 ```
 
-### Sort:
-An array of hashes with the following keys:
+### Sort
 
-- object: (aniamls, organizations)
-- sort_value: they attribute to use for sorting
-- direction:  sort direction
+An array of hashes with these keys:
+
+- `object`: `:animals` or `:orgs`
+- `sort_value`: the field to sort by
+- `direction`: `:ascending` (default) or `:descending`
 
 ```ruby
-# sort by Animal breedPrimary - ascending, then Organization name ascending
-options[:sort] = [
-  {
-    object: :animals,
-    sort_value: :breedPrimary,
-    direction: :ascending
-  },
-  {
-    object: :orgs,
-    sort_value: :name,
-    direction: :ascending
-  }
-]
+# animals by distance, then by name descending
+client.search_animals(
+  postalcode: "92107",
+  sort: [
+    { object: :animals, sort_value: :distance, direction: :ascending },
+    { object: :animals, sort_value: :name, direction: :descending }
+  ]
+)
 ```
 
-### Page:
-For paginating requests.  Integer value.  Defaults to 1.
+### Page
+
+The page number for paginated results. Defaults to 1.
+
 ```ruby
-options = { page: 2 }
+client.search_animals(page: 2)
 ```
 
-### Limit:
-Simple integer limit (Rescue Groups API enforces a max limit of 250).  Defaults to 25.
-```ruby
-options = { limit: 50 }
-```
+### Limit
 
-### Location Filtering:
-_Only available on search requests_
-
-The following "global" filters are available to search by location.
+The number of results per page. Defaults to 25; the API maximum is 250.
 
 ```ruby
-options[:postalcode] = '92107' # string postalcode
-```
-
-```ruby
-options[:radius_in_miles] = 20 # integer value
-```
-
-### General Filters:
-_Only available on search requests_
-
-An array of hashes containing the following keys:
-
-- object: animals, organizations
-- field_name: the object's field
-- operation: see list of operations [here](https://github.com/bwanicur/rescue_groups_v5/blob/master/lib/rescue_groups_v5/services/filter_builder.rb)
-- value
-
-```ruby
-options[:filters] = [
-  {
-    object: :animals,
-    fieldName: :breedPrimary,
-    operation: :contains,
-    value: 'Staffordshire'
-  },
-  {
-    object: :animals,
-    operation: :greater_than,
-    fieldName: :birthDate,
-    value: '01-01-2012'
-  }  
-]
+client.search_animals(limit: 50)
 ```
 
 ## Contributing

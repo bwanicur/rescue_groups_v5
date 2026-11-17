@@ -7,14 +7,14 @@ module RescueGroupsV5
     class Response
       def initialize(json, nest_data = nil)
         @json = json
-        @nest_data = nest_data || Config.read(:nest_data)
+        @nest_data = nest_data
       end
 
       def run
         data = JSON.parse(@json)
-        if @nest_data && !data["included"]&.empty?
+        if @nest_data && data["included"]&.any?
           data["data"].each do |data_hash|
-            data_hash["relationships"].each do |_obj_name, rel_hash|
+            data_hash.fetch("relationships", {}).each do |_obj_name, rel_hash|
               rel_hash["data"].each do |rel_data_hash|
                 rel_data_hash.merge!(get_included_data(data["included"], rel_data_hash))
               end
